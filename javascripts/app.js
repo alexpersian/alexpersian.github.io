@@ -74,20 +74,13 @@ pointLight.position.z = 130;
 scene.add(pointLight);
 
 
-window.requestAnimFrame = (function() {
-	return 	window.requestAnimationFrame 		||
-			window.webkitRequestAnimationFrame 	||
-			window.mozRequestAnimationFrame		||
-			function ( callback) {
-				window.setTimeout(callback, 1000 / 60);
-			};
-})();
-
-// draw it!
-(function animloop() {
-	requestAnimFrame(animloop);
+function render() {
+	requestAnimationFrame(render);
+		sphere.rotation.z += 0.01;
+		sphere.rotation.y += 0.1;
 	renderer.render(scene, camera);
-})();
+}
+render();
 
 // sphere geometry
 sphere.geometry
