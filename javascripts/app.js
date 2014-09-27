@@ -41,18 +41,23 @@ var radius = 50,
 	segments = 16,
 	rings = 16;
 
-// create a new mesh with sphere
-// geometry - sphereMaterial will
-// be covered next
-var sphere = new THREE.Mesh(
-	new THREE.SphereGeometry(
-		radius, 
-		segments, 
-		rings),
-	sphereMaterial);
+// // create a new mesh with sphere
+// // geometry - sphereMaterial will
+// // be covered next
+// var sphere = new THREE.Mesh(
+// 	new THREE.SphereGeometry(
+// 		radius, 
+// 		segments, 
+// 		rings),
+// 	sphereMaterial);
 
-// add the sphere to the scene
-scene.add(sphere);
+// // add the sphere to the scene
+// scene.add(sphere);
+
+var geometry = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
+var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+var torusKnot = new THREE.Mesh( geometry, material );
+scene.add( torusKnot );
 
 // create the sphere's material
 var sphereMaterial = 
@@ -76,8 +81,8 @@ scene.add(pointLight);
 
 function render() {
 	requestAnimationFrame(render);
-		sphere.rotation.z += 0.01;
-		sphere.rotation.y += 0.1;
+		torusKnot.rotation.z += 0.01;
+		torusKnot.rotation.y += 0.1;
 	renderer.render(scene, camera);
 }
 render();
