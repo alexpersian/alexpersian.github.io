@@ -58,7 +58,7 @@ scene.add(sphere);
 var sphereMaterial = 
 	new THREE.MeshLambertMaterial(
 	{
-		color: 0x000000
+		color: 0xCC0000
 	});
 
 // create a point light
