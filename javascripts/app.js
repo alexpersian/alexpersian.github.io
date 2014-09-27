@@ -54,8 +54,8 @@ var radius = 50,
 // // add the sphere to the scene
 // scene.add(sphere);
 
-var geometry = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
-var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+var geometry = new THREE.TorusKnotGeometry( 100, 3, 100, 32 );
+var material = new THREE.MeshBasicMaterial( { vertexColors: THREE.VertexColors } );
 var torusKnot = new THREE.Mesh( geometry, material );
 scene.add( torusKnot );
 
