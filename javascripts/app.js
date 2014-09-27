@@ -75,3 +75,25 @@ scene.add(pointLight);
 
 // draw it!
 renderer.render(scene, camera);
+
+// sphere geometry
+sphere.geometry
+
+// which contains the vertices and faces
+sphere.geometry.vertices // an array
+sphere.geometry.face // also an array
+
+// its position
+sphere.position // contains x, y and z
+sphere.rotaion // x, y, z
+sphere.scale // x, y, z
+
+// set the geometry to dynamic
+// so that it allows updates
+sphere.geometry.dynamic = true;
+
+// changes to the vertices
+sphere.geometry.verticesNeedUpdate = true;
+
+// changes to the normals
+sphere.geometry.normalsNeedUpdate = true;
