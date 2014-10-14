@@ -1,110 +1,63 @@
 // set the scene size
-var WIDTH = 400,
-	HEIGHT = 300;
+var WIDTH = 800,
+    HEIGHT = 600;
 
 // set some camera attributes
 var VIEW_ANGLE = 45,
-	ASPECT = WIDTH / HEIGHT,
-	NEAR = 0.1,
-	FAR = 10000;
+    ASPECT = WIDTH / HEIGHT,
+    NEAR = 0.1,
+    FAR = 10000;
 
-// get the DOM element to attach to
-// - assume we have jQuery to hand
-var $container = $('#container');
-
-// create a WebGL renderer, camera
-// and a scene
-var renderer = new THREE.WebGLRenderer({ antialias: true });
-var camera = new THREE.PerspectiveCamera(
-	VIEW_ANGLE, 
-	ASPECT, 
-	NEAR, 
-	FAR);
-
-var scene = new THREE.Scene();
-
-// add the camera to the scene
-scene.add(camera);
-
-// the camera starts at 0, 0, 0
-// set it back further
-camera.position.z = 300;
-
-// start the renderer
+// Renderer
+var renderer = new THREE.WebGLRenderer({
+    antialias: true
+});
 renderer.setSize(WIDTH, HEIGHT);
 
-// attach the render-supplied DOM element
+// Camera
+var camera = new THREE.PerspectiveCamera(
+    VIEW_ANGLE,
+    ASPECT,
+    NEAR,
+    FAR);
+camera.position.z = 300;
+
+// Scene
+var scene = new THREE.Scene();
+
+// jQuery, append renderer to DOM
+var $container = $('#container');
 $container.append(renderer.domElement);
 
-// set up the sphere vars
-var radius = 50,
-	segments = 16,
-	rings = 16;
-
-// // create a new mesh with sphere
-// // geometry - sphereMaterial will
-// // be covered next
-// var sphere = new THREE.Mesh(
-// 	new THREE.SphereGeometry(
-// 		radius, 
-// 		segments, 
-// 		rings),
-// 	sphereMaterial);
-
-// // add the sphere to the scene
-// scene.add(sphere);
-
-var geometry = new THREE.TorusKnotGeometry( 70, 3, 100, 32 );
-var material = new THREE.MeshBasicMaterial( { color: 0xcc0000 } );
-var torusKnot = new THREE.Mesh( geometry, material );
-scene.add( torusKnot );
-
-// create the sphere's material
-var sphereMaterial = 
-	new THREE.MeshLambertMaterial(
-	{
-		vertexColors: THREE.VertexColors
-	});
-
-// create a point light
+// Lighting
 var pointLight =
-	new THREE.PointLight(0xffffff);
+    new THREE.PointLight(0xffffff);
 
-// set the light's position
 pointLight.position.x = 10;
 pointLight.position.y = 50;
 pointLight.position.z = 130;
 
-// add the light to the scene
+// Attempt at using boxes
+var geometry = new THREE.BoxGeometry( WIDTH / 30, HEIGHT / 20, 0 );
+var material = new THREE.MeshBasicMaterial( {color: 0xff0000} );
+var cube = new THREE.Mesh( geometry, material );
+cube.position.x = -152;
+cube.position.y = 109;
+
+var geometry1 = new THREE.BoxGeometry( WIDTH / 30, HEIGHT / 20, 0 );
+var material1 = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
+var cube1 = new THREE.Mesh( geometry, material );
+cube1.position.x = -182;
+cube1.position.y = 109;
+
+scene.add(cube);
+scene.add(cube1);
+scene.add(camera);
 scene.add(pointLight);
 
-
+// Rendering
 function render() {
-	requestAnimationFrame(render);
-		torusKnot.rotation.z += 0.01;
-		torusKnot.rotation.y += 0.1;
-	renderer.render(scene, camera);
+    requestAnimationFrame(render);
+    renderer.render(scene, camera);
 }
 render();
-
-// sphere geometry
-sphere.geometry
-
-// which contains the vertices and faces
-sphere.geometry.vertices // an array
-sphere.geometry.face // also an array
-
-// its position
-sphere.position // contains x, y and z
-sphere.rotaion // x, y, z
-sphere.scale // x, y, z
-
-// set the geometry to dynamic
-// so that it allows updates
-sphere.geometry.dynamic = true;
-
-// changes to the vertices
-sphere.geometry.verticesNeedUpdate = true;
-
-// changes to the normals
-sphere.geometry.normalsNeedUpdate = true;
