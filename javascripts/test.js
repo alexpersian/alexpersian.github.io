@@ -1,6 +1,6 @@
 $(document).ready(function (){
     // inner window size constants
-    var WIDTH = 1050;
+    var WIDTH = 550;
     var HEIGHT = 550;
 
     var canvas = document.getElementById('myCanvas');
