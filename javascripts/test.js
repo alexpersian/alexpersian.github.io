@@ -1,7 +1,7 @@
 $(document).ready(function (){
     // inner window size constants
-    var WIDTH = 550;
-    var HEIGHT = 550;
+    var WIDTH = 1280;
+    var HEIGHT = 1020;
 
     var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
@@ -18,8 +18,8 @@ $(document).ready(function (){
     var pixelRowPos = 0;
     var pixelColPos = 0;
 
-    var pixelWidth = 50;
-    var pixelHeight = 50;
+    var pixelWidth = 128;
+    var pixelHeight = 102;
 
     var colorBase = 4;
     var colorIndex = 0;
