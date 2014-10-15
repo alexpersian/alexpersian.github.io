@@ -12,23 +12,24 @@ $(document).ready(function (){
 
     // defines the pixel density of display
     var pixelRows = 10;
-    var pixelColumns = 33;
+    var pixelColumns = 10;
     var pixelDensity = pixelRows * pixelColumns;
 
     var pixelRowPos = 0;
     var pixelColPos = 0;
 
-    var pixelWidth = 30;
+    var pixelWidth = 50;
     var pixelHeight = 50;
 
-    var colorBase = 2;
+    var colorBase = 4;
     var colorIndex = 0;
 
     var pixels = [];
 
     var colors = [
-        '#000000', '#FFFFFF'
+        '#000000', '#00FF00', '#0000FF', '#FF0000'
 
+//        greyscale not used
 //        '#000000', '#080808', '#101010', '#181818', '#202020', '#282828',
 //        '#303030', '#383838', '#404040', '#484848', '#505050', '#585858',
 //        '#606060', '#686868', '#707070', '#787878', '#808080', '#888888',
@@ -43,8 +44,6 @@ $(document).ready(function (){
         window.msRequestAnimationFrame;
 
     function draw() {
-        console.log("drawing");
-
         for (var i = 0; i < pixelRows * pixelColumns; i++) {
 
             context.beginPath();
@@ -54,11 +53,11 @@ $(document).ready(function (){
 
             pixels[i] = createPixel(pixelColPos, pixelRowPos, pixelWidth, pixelHeight, colorIndex);
 
-            if (pixelColPos == 960) {
-                pixelRowPos += 50;
+            if (pixelColPos == pixelWidth * (pixelColumns - 1)) {
+                pixelRowPos += pixelHeight;
                 pixelColPos = 0;
             } else {
-                pixelColPos += 30;
+                pixelColPos += pixelWidth;
             }
         }
     }draw();
