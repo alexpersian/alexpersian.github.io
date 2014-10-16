@@ -1,7 +1,7 @@
 $(document).ready(function (){
     // inner window size constants
     var WIDTH = 1280;
-    var HEIGHT = 1020;
+    var HEIGHT = 800;
 
     var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
@@ -19,7 +19,7 @@ $(document).ready(function (){
     var pixelColPos = 0;
 
     var pixelWidth = 128;
-    var pixelHeight = 102;
+    var pixelHeight = 80;
 
     var colorBase = 4;
     var colorIndex = 0;
@@ -27,15 +27,7 @@ $(document).ready(function (){
     var pixels = [];
 
     var colors = [
-        '#000000', '#00FF00', '#0000FF', '#FF0000'
-
-//        greyscale not used
-//        '#000000', '#080808', '#101010', '#181818', '#202020', '#282828',
-//        '#303030', '#383838', '#404040', '#484848', '#505050', '#585858',
-//        '#606060', '#686868', '#707070', '#787878', '#808080', '#888888',
-//        '#909090', '#989898', '#A0A0A0', '#A8A8A8', '#B0B0B0', '#B8B8B8',
-//        '#C0C0C0', '#C8C8C8', '#D0D0D0', '#D8D8D8', '#E0E0E0', '#E8E8E8',
-//        '#F0F0F0', '#F8F8F8', '#FFFFFF'
+        '#000000', '#FF0000', '#00FF00', '#0000FF'
     ];
 
     var requestAnimationFrame = window.requestAnimationFrame ||

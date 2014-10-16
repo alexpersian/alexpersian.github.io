@@ -1,0 +1,25 @@
+{
+  "name": "alexpersian.github.io",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexpersian/alexpersian.github.io.git"
+  },
+  "keywords": [
+    "picture"
+  ],
+  "author": "Alex Persian",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/alexpersian/alexpersian.github.io/issues"
+  },
+  "homepage": "https://github.com/alexpersian/alexpersian.github.io",
+  "dependencies": {
+    "express": "^4.9.7"
+  }
+}
