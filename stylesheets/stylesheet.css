@@ -162,7 +162,28 @@ a.button span {
   background: transparent url(../images/octocat-icon.png) 12px 50% no-repeat;
 }
 #view-on-github {
-  margin-right: 0;
+  margin-right: 2px;
+}
+
+#terrain-generator span {
+    background: transparent url(../images/terrain-icon.png) 12px 50% no-repeat;
+}
+#terrain-generator {
+    margin-right: 2px;
+}
+
+#every-picture span {
+    background: transparent url(../images/picture-icon.png) 12px 50% no-repeat;
+}
+#every-picture {
+    margin-right: 2px;
+}
+
+#three-js span {
+    background: transparent url(../images/three-icon.png) 12px 50% no-repeat;
+}
+#three-js {
+    margin-right: 2px;
 }
 
 code, pre {

@@ -93,8 +93,8 @@ $(document).ready(function (){
         }
     }
 
-    function start() {
+//    function start() {
         redraw();
-    }
+//    }
     window.start = start;
 });

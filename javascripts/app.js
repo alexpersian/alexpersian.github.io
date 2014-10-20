@@ -38,20 +38,11 @@ pointLight.position.y = 50;
 pointLight.position.z = 130;
 
 // Attempt at using boxes
-var geometry = new THREE.BoxGeometry( WIDTH / 30, HEIGHT / 20, 0 );
-var material = new THREE.MeshBasicMaterial( {color: 0xff0000} );
-var cube = new THREE.Mesh( geometry, material );
-cube.position.x = -152;
-cube.position.y = 109;
+var geometry = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
+var material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+var torusKnot = new THREE.Mesh( geometry, material );
 
-var geometry1 = new THREE.BoxGeometry( WIDTH / 30, HEIGHT / 20, 0 );
-var material1 = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-var cube1 = new THREE.Mesh( geometry, material );
-cube1.position.x = -182;
-cube1.position.y = 109;
-
-scene.add(cube);
-scene.add(cube1);
+scene.add( torusKnot );
 scene.add(camera);
 scene.add(pointLight);
 

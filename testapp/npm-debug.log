@@ -1,0 +1,184 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'http-server', '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'http-server', null ]
+5 verbose cache add name=undefined spec="http-server" args=["http-server",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'http-server',
+6 verbose parsed url   path: 'http-server',
+6 verbose parsed url   href: 'http-server' }
+7 silly lockFile ed608307-http-server http-server
+8 verbose lock http-server /Users/alexpersian/.npm/ed608307-http-server.lock
+9 silly lockFile ed608307-http-server http-server
+10 silly lockFile ed608307-http-server http-server
+11 verbose addNamed [ 'http-server', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 550353c6-http-server http-server@
+14 verbose lock http-server@ /Users/alexpersian/.npm/550353c6-http-server.lock
+15 silly addNameRange { name: 'http-server', range: '*', hasData: false }
+16 verbose request where is /http-server
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id f804998a3677b313
+19 verbose url raw /http-server
+20 verbose url resolving [ 'https://registry.npmjs.org/', './http-server' ]
+21 verbose url resolved https://registry.npmjs.org/http-server
+22 verbose request where is https://registry.npmjs.org/http-server
+23 info trying registry request attempt 1 at 12:08:13
+24 verbose etag "GRUZZAK9N6WU29IC3EFS78GW"
+25 http GET https://registry.npmjs.org/http-server
+26 http 200 https://registry.npmjs.org/http-server
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Thu, 16 Oct 2014 17:08:14 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+27 silly registry.get     etag: '"6BN5SRSQ8BN8SAJO8W46PO9OH"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '35974',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '56',
+27 silly registry.get     'x-served-by': 'cache-atl6235-ATL',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1413479294.028478,VS0,VE1',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly addNameRange number 2 { name: 'http-server', range: '*', hasData: true }
+29 silly addNameRange versions [ 'http-server',
+29 silly addNameRange   [ '0.1.0',
+29 silly addNameRange     '0.1.1',
+29 silly addNameRange     '0.1.3',
+29 silly addNameRange     '0.2.1',
+29 silly addNameRange     '0.2.2',
+29 silly addNameRange     '0.2.3',
+29 silly addNameRange     '0.2.4',
+29 silly addNameRange     '0.2.5',
+29 silly addNameRange     '0.2.6',
+29 silly addNameRange     '0.2.9',
+29 silly addNameRange     '0.3.0',
+29 silly addNameRange     '0.4.0',
+29 silly addNameRange     '0.4.1',
+29 silly addNameRange     '0.5.0',
+29 silly addNameRange     '0.5.1',
+29 silly addNameRange     '0.5.2',
+29 silly addNameRange     '0.5.3',
+29 silly addNameRange     '0.5.5',
+29 silly addNameRange     '0.6.0',
+29 silly addNameRange     '0.6.1',
+29 silly addNameRange     '0.7.0',
+29 silly addNameRange     '0.7.1',
+29 silly addNameRange     '0.7.2' ] ]
+30 verbose addNamed [ 'http-server', '0.7.2' ]
+31 verbose addNamed [ '0.7.2', '0.7.2' ]
+32 silly lockFile b6ed51df-http-server-0-7-2 http-server@0.7.2
+33 verbose lock http-server@0.7.2 /Users/alexpersian/.npm/b6ed51df-http-server-0-7-2.lock
+34 silly lockFile 4dd7a8be-ttp-server-http-server-0-7-2-tgz https://registry.npmjs.org/http-server/-/http-server-0.7.2.tgz
+35 verbose lock https://registry.npmjs.org/http-server/-/http-server-0.7.2.tgz /Users/alexpersian/.npm/4dd7a8be-ttp-server-http-server-0-7-2-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/http-server/-/http-server-0.7.2.tgz',
+36 verbose addRemoteTarball   'ff02e9338bfd9d3687668f090e088a7606eeb12e' ]
+37 info retry fetch attempt 1 at 12:08:14
+38 verbose fetch to= /var/folders/b8/srn7nr3563g9wb_jxfvh94xr0000gn/T/npm-4852-uFrkZ9OE/registry.npmjs.org/http-server/-/http-server-0.7.2.tgz
+39 http GET https://registry.npmjs.org/http-server/-/http-server-0.7.2.tgz
+40 http 200 https://registry.npmjs.org/http-server/-/http-server-0.7.2.tgz
+41 silly lockFile 4dd7a8be-ttp-server-http-server-0-7-2-tgz https://registry.npmjs.org/http-server/-/http-server-0.7.2.tgz
+42 silly lockFile 4dd7a8be-ttp-server-http-server-0-7-2-tgz https://registry.npmjs.org/http-server/-/http-server-0.7.2.tgz
+43 silly lockFile b6ed51df-http-server-0-7-2 http-server@0.7.2
+44 silly lockFile b6ed51df-http-server-0-7-2 http-server@0.7.2
+45 silly lockFile 550353c6-http-server http-server@
+46 silly lockFile 550353c6-http-server http-server@
+47 silly resolved [ { name: 'http-server',
+47 silly resolved     version: '0.7.2',
+47 silly resolved     author: { name: 'Nodejitsu', email: 'support@nodejitsu.com' },
+47 silly resolved     description: 'a simple zero-configuration command-line http server',
+47 silly resolved     main: './lib/http-server',
+47 silly resolved     repository:
+47 silly resolved      { type: 'git',
+47 silly resolved        url: 'git://github.com/nodeapps/http-server.git' },
+47 silly resolved     keywords: [ 'cli', 'command' ],
+47 silly resolved     scripts:
+47 silly resolved      { start: 'node ./bin/http-server',
+47 silly resolved        test: 'vows --spec --isolate' },
+47 silly resolved     contributors:
+47 silly resolved      [ [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object] ],
+47 silly resolved     dependencies:
+47 silly resolved      { colors: '0.6.x',
+47 silly resolved        optimist: '0.5.x',
+47 silly resolved        union: '0.3.x',
+47 silly resolved        ecstatic: '0.5.x',
+47 silly resolved        portfinder: '0.2.x',
+47 silly resolved        opener: '~1.3.0' },
+47 silly resolved     devDependencies: { vows: '0.7.x', request: '2.21.x' },
+47 silly resolved     bugs: { url: 'https://github.com/nodeapps/http-server/issues' },
+47 silly resolved     licenses: [ [Object] ],
+47 silly resolved     analyze: false,
+47 silly resolved     preferGlobal: 'true',
+47 silly resolved     bin: { 'http-server': './bin/http-server' },
+47 silly resolved     gitHead: '114380ce7802643784ef3c230745ee7917c9ded2',
+47 silly resolved     homepage: 'https://github.com/nodeapps/http-server',
+47 silly resolved     _id: 'http-server@0.7.2',
+47 silly resolved     _shasum: 'ff02e9338bfd9d3687668f090e088a7606eeb12e',
+47 silly resolved     _from: 'http-server@',
+47 silly resolved     _npmVersion: '2.0.2',
+47 silly resolved     _nodeVersion: '0.10.32',
+47 silly resolved     _npmUser: { name: 'indexzero', email: 'charlie.robbins@gmail.com' },
+47 silly resolved     maintainers: [ [Object], [Object], [Object] ],
+47 silly resolved     dist:
+47 silly resolved      { shasum: 'ff02e9338bfd9d3687668f090e088a7606eeb12e',
+47 silly resolved        tarball: 'http://registry.npmjs.org/http-server/-/http-server-0.7.2.tgz' },
+47 silly resolved     directories: {},
+47 silly resolved     _resolved: 'https://registry.npmjs.org/http-server/-/http-server-0.7.2.tgz' } ]
+48 info install http-server@0.7.2 into /usr/local/lib
+49 info installOne http-server@0.7.2
+50 verbose lib/node_modules/http-server unbuild
+51 verbose tar unpack /Users/alexpersian/.npm/http-server/0.7.2/package.tgz
+52 silly lockFile c2cc12bc-cal-lib-node-modules-http-server tar:///usr/local/lib/node_modules/http-server
+53 verbose lock tar:///usr/local/lib/node_modules/http-server /Users/alexpersian/.npm/c2cc12bc-cal-lib-node-modules-http-server.lock
+54 silly lockFile d12c784b-pm-http-server-0-7-2-package-tgz tar:///Users/alexpersian/.npm/http-server/0.7.2/package.tgz
+55 verbose lock tar:///Users/alexpersian/.npm/http-server/0.7.2/package.tgz /Users/alexpersian/.npm/d12c784b-pm-http-server-0-7-2-package-tgz.lock
+56 silly gunzTarPerm modes [ '755', '644' ]
+57 error Error: EACCES, mkdir '/usr/local/lib/node_modules/http-server'
+57 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/http-server']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/usr/local/lib/node_modules/http-server',
+57 error   fstream_type: 'Directory',
+57 error   fstream_path: '/usr/local/lib/node_modules/http-server',
+57 error   fstream_class: 'DirWriter',
+57 error   fstream_stack:
+57 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+57 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+57 error      'Object.oncomplete (fs.js:107:15)' ] }
+58 error Please try running this command again as root/Administrator.
+59 error System Darwin 13.4.0
+60 error command "node" "/usr/local/bin/npm" "install" "http-server" "-g"
+61 error cwd /Users/alexpersian/Documents/GitHub/alexpersian.github.io/testapp/public/javascripts
+62 error node -v v0.10.32
+63 error npm -v 1.4.28
+64 error path /usr/local/lib/node_modules/http-server
+65 error fstream_path /usr/local/lib/node_modules/http-server
+66 error fstream_type Directory
+67 error fstream_class DirWriter
+68 error code EACCES
+69 error errno 3
+70 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/http-server'
+71 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+71 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+71 error fstream_stack Object.oncomplete (fs.js:107:15)
+72 verbose exit [ 3, true ]
