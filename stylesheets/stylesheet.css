@@ -186,6 +186,13 @@ a.button span {
     margin-right: 2px;
 }
 
+#slaughterfest99 span {
+    background: transparent url(../images/slaughterfest-99.png) 12px 50% no-repeat;
+}
+#slaughterfest99 {
+    margin-right: 2px;
+}
+
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
   color: #222;
