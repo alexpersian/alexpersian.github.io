@@ -1,7 +1,7 @@
 $(document).ready(function (){
     // inner window size constants
-    var WIDTH = 1280;
-    var HEIGHT = 920;
+    var WIDTH = 1100;
+    var HEIGHT = 800;
 
     var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
@@ -18,8 +18,8 @@ $(document).ready(function (){
     var pixelRowPos = 0;
     var pixelColPos = 0;
 
-    var pixelWidth = 128;
-    var pixelHeight = 92;
+    var pixelWidth = 110;
+    var pixelHeight = 80;
 
     var colorBase = 4;
     var colorIndex = 0;
@@ -93,8 +93,8 @@ $(document).ready(function (){
         }
     }
 
-//    function start() {
+    function start() {
         redraw();
-//    }
+    }
     window.start = start;
 });

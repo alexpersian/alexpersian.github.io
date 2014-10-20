@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Every Picture</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="javascripts/picture.js"></script>
+        <style>
+            canvas {
+                margin: 10px;
+                padding: 5px;
+            }
+        </style>
+	</head>
+	<body>
+        <div id="header">
+            <span>
+                Display of every combination of colors for a pixel grid. Press start to begin.
+                <button type="button" id="startButton" onclick="start()">Start</button>
+            </span>
+        </div>
+        <div id="canvas">
+            <canvas id="myCanvas"></canvas>
+        </div>
+	</body>
+</html>
