@@ -30,8 +30,7 @@ var $container = $('#container');
 $container.append(renderer.domElement);
 
 // Lighting
-var pointLight =
-    new THREE.PointLight(0xffffff);
+var pointLight = new THREE.PointLight(0xffffff);
 
 pointLight.position.x = 10;
 pointLight.position.y = 50;
@@ -50,5 +49,4 @@ scene.add(pointLight);
 function render() {
     requestAnimationFrame(render);
     renderer.render(scene, camera);
-}
-render();
+}render();
