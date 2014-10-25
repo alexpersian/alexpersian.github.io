@@ -74,7 +74,19 @@ $(document).ready(function() {
     function draw_terrain() {
         var j = geometry.vertices.length;
         for (var i = 0; i < j; i++) {
-            geometry.vertices[i].z = (Math.pow((Math.random() + 0.1), -1)) * 10;
+            //geometry.vertices[i].z = (Math.pow((Math.random() + 0.1), -1)) * 10;
+
+            geometry.vertices[findIndex()] = (Math.seedrandom(i));
+
+
+
+        }
+    }
+
+    function randomize(rows, amplitude) {
+        for (var i = 0; i < rows; i++) {
+            Math.seedrandom(i);
+
         }
     }
 
