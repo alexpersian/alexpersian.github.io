@@ -45,7 +45,7 @@ var WBAPP = (function() {
 
     var button = document.getElementById('btn-save');
     button.addEventListener('click', function(e) {
-        button.href = canvas.toDataURL('image/png');
+        button.href = canvas.toDataURL('image/jpeg');
     });
 
     return wb;
