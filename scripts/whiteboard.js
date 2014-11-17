@@ -2,35 +2,52 @@
  * Created by alexpersian on 11/16/14.
  */
 
-var canvas = document.getElementById("myCanvas");
+var WBAPP = (function() {
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+    var wb = {};
 
-var penColor = 'black';
-var penStroke = 5;
-var prevColor, prevStroke;
+    var canvas = document.getElementById("myCanvas");
 
-function changeColor(color) {
-    if (erasing === true) { erase() }
-    penColor = color;
-    console.log("pen is now " + penColor);
-}
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-var erasing = false;
+    wb.penColor = 'black';
+    wb.penStroke = 5;
+    var prevColor, prevStroke;
 
-function erase() {
-    if (erasing === false) {
-        prevColor = penColor;
-        prevStroke = penStroke;
-        penColor = 'white';
-        penStroke = 30;
-        document.getElementById("eraserMode").innerHTML = "Eraser ON";
-        erasing = true;
-    } else {
-        penColor = prevColor;
-        penStroke = prevStroke;
-        document.getElementById("eraserMode").innerHTML = "Eraser OFF";
-        erasing = false;
-    }
-}
+    wb.changeColor = function (color) {
+        if (erasing === true) { wb.erase() }
+        wb.penColor = color;
+        console.log("pen is now " + wb.penColor);
+    };
+
+    var erasing = false;
+
+    wb.erase = function () {
+        if (erasing === false) {
+            prevColor = wb.penColor;
+            prevStroke = wb.penStroke;
+            wb.penColor = 'white';
+            wb.penStroke = 40;
+            document.getElementById("eraserMode").innerHTML = "Eraser ON";
+            erasing = true;
+        } else {
+            wb.penColor = prevColor;
+            wb.penStroke = prevStroke;
+            document.getElementById("eraserMode").innerHTML = "Eraser OFF";
+            erasing = false;
+        }
+    };
+
+    wb.getDate = function () {
+        return new Date();
+    };
+
+    var button = document.getElementById('btn-save');
+    button.addEventListener('click', function(e) {
+        button.href = canvas.toDataURL('image/png');
+    });
+
+    return wb;
+}());
+

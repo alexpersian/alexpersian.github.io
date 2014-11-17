@@ -7,8 +7,8 @@ var myPath;
 function onMouseDown(event) {
     myPath = new Path();
     myPath.add(event.point);
-    myPath.strokeColor = penColor;
-    myPath.strokeWidth = penStroke;
+    myPath.strokeColor = WBAPP.penColor;
+    myPath.strokeWidth = WBAPP.penStroke;
     myPath.strokeCap = 'round';
 }
 
