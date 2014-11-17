@@ -2,7 +2,7 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{alexpersian.github.io node_modules}" />
-    <file url="file://$PROJECT_DIR$/terrain.html" libraries="{three}" />
+    <file url="file://$PROJECT_DIR$/html/terrain.html" libraries="{three}" />
     <file url="PROJECT" libraries="{dat.gui, html5}" />
   </component>
 </project>

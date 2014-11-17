@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Whiteboard</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+||
+<!-- Drawing colors -->
+<button type="button" class="btn btn-inverse" id="penBlack" onclick="changeColor('black')">Black</button>
+<button type="button" class="btn btn-danger" id="penRed" onclick="changeColor('red')">Red</button>
+<button type="button" class="btn btn-primary" id="penBlue" onclick="changeColor('blue')">Blue</button>
+<button type="button" class="btn btn-success" id="penGreen" onclick="changeColor('green')">Green</button>
+||
+<!-- Erasing -->
+<button type="button" class="btn btn-warning" id="erase" onclick="erase()">Erase</button>
+<span id="eraserMode">Eraser OFF</span>
+<!--<button type="button" class="btn btn-default" id="eraseAll" onclick="eraseAll()">Clear Canvas</button>-->
+||
+<canvas id="myCanvas" resize="true"></canvas>
+
+
+
+<!-- External scripts -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<!-- Internal scripts -->
+<script type="text/javascript" src="../scripts/paper-full.js"></script>
+<script type="text/javascript" src="../scripts/whiteboard.js"></script>
+<script type="text/paperscript" canvas="myCanvas" src="../scripts/wb-paper.js"></script>
+
+</body>
+</html>
