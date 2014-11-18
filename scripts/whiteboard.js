@@ -6,10 +6,13 @@ var WBAPP = (function() {
 
     var wb = {};
 
-    var canvas = document.getElementById("myCanvas");
+    wb.canvas = document.getElementById("myCanvas");
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    wb.width = window.innerWidth;
+    wb.height = window.innerHeight;
+
+    wb.canvas.width = wb.width;
+    wb.canvas.height = wb.height;
 
     wb.penColor = 'black';
     wb.penStroke = 5;
@@ -18,7 +21,6 @@ var WBAPP = (function() {
     wb.changeColor = function (color) {
         if (erasing === true) { wb.erase() }
         wb.penColor = color;
-        console.log("pen is now " + wb.penColor);
     };
 
     var erasing = false;
@@ -29,25 +31,39 @@ var WBAPP = (function() {
             prevStroke = wb.penStroke;
             wb.penColor = 'white';
             wb.penStroke = 40;
-            document.getElementById("eraserMode").innerHTML = "Eraser ON";
+
+            document.getElementById("erase").innerHTML =
+                "<span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span> Eraser ON";
+
             erasing = true;
         } else {
             wb.penColor = prevColor;
             wb.penStroke = prevStroke;
-            document.getElementById("eraserMode").innerHTML = "Eraser OFF";
+            document.getElementById("erase").innerHTML =
+                "<span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span> Eraser OFF";
             erasing = false;
         }
     };
 
     wb.getDate = function () {
-        return new Date();
+
+        var d = new Date();
+
+        var year = d.getFullYear();
+        var month = d.getMonth() + 1;
+        var day = d.getDate();
+        var hour = d.getHours();
+        var min = d.getMinutes();
+        var sec = d.getSeconds();
+
+        return (year + "-" + month + "-" + day + "_" + hour + ":" + min + ":" + sec);
     };
 
     var button = document.getElementById('btn-save');
     button.addEventListener('click', function(e) {
-        button.href = canvas.toDataURL('image/jpeg');
+        button.download = wb.getDate();
+        button.href = wb.canvas.toDataURL('image/png');
     });
 
     return wb;
 }());
-

@@ -15,3 +15,7 @@ function onMouseDown(event) {
 function onMouseDrag(event) {
     myPath.add(event.point);
 }
+
+var rectangle = new Rectangle(new Point(0, 0), new Point(WBAPP.width, WBAPP.height));
+var rectPath = new Path.Rectangle(rectangle);
+rectPath.fillColor = 'white';
