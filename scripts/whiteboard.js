@@ -65,5 +65,10 @@ var WBAPP = (function() {
         button.href = wb.canvas.toDataURL('image/png');
     });
 
+    $("#penWidth").change(function () {
+        var $dropdown = $(this);
+        wb.penStroke = $dropdown.val();
+    });
+
     return wb;
 }());
