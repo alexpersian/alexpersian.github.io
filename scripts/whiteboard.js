@@ -15,7 +15,8 @@ var WBAPP = (function() {
     wb.canvas.height = wb.height;
 
     wb.penColor = 'black';
-    wb.penStroke = 5;
+    wb.penStroke = 50;
+    wb.eraseStroke = 50;
     var prevColor, prevStroke;
 
     wb.changeColor = function (color) {
@@ -30,7 +31,7 @@ var WBAPP = (function() {
             prevColor = wb.penColor;
             prevStroke = wb.penStroke;
             wb.penColor = 'white';
-            wb.penStroke = 40;
+            wb.penStroke = wb.eraseStroke;
 
             document.getElementById("erase").innerHTML =
                 "<span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span> Eraser ON";
@@ -68,6 +69,13 @@ var WBAPP = (function() {
     $("#penWidth").change(function () {
         var $dropdown = $(this);
         wb.penStroke = $dropdown.val();
+    });
+
+    $("#eraseWidth").change(function () {
+        var $dropdown = $(this);
+        wb.eraseStroke = $dropdown.val();
+        if (erasing === true) { wb.penStroke = wb.eraseStroke; }
+        //TODO: Make it change eraser width without toggling button
     });
 
     return wb;
