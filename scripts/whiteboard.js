@@ -15,7 +15,7 @@ var WBAPP = (function() {
     wb.canvas.height = wb.height;
 
     wb.penColor = 'black';
-    wb.penStroke = 50;
+    wb.penStroke = 5;
     wb.eraseStroke = 50;
     var prevColor, prevStroke;
 
@@ -75,7 +75,6 @@ var WBAPP = (function() {
         var $dropdown = $(this);
         wb.eraseStroke = $dropdown.val();
         if (erasing === true) { wb.penStroke = wb.eraseStroke; }
-        //TODO: Make it change eraser width without toggling button
     });
 
     return wb;
