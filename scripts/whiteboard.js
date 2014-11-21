@@ -9,7 +9,7 @@ var WBAPP = (function() {
     wb.canvas = document.getElementById("myCanvas");
 
     wb.width = window.innerWidth;
-    wb.height = window.innerHeight;
+    wb.height = window.innerHeight * 0.944;
 
     wb.canvas.width = wb.width;
     wb.canvas.height = wb.height;
@@ -27,22 +27,20 @@ var WBAPP = (function() {
     var erasing = false;
 
     wb.erase = function () {
-        if (erasing === false) {
-            prevColor = wb.penColor;
-            prevStroke = wb.penStroke;
-            wb.penColor = 'white';
-            wb.penStroke = wb.eraseStroke;
-
-            document.getElementById("erase").innerHTML =
-                "<span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span> Eraser ON";
-
-            erasing = true;
-        } else {
+        if (erasing !== false) {
             wb.penColor = prevColor;
             wb.penStroke = prevStroke;
             document.getElementById("erase").innerHTML =
                 "<span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span> Eraser OFF";
             erasing = false;
+        } else {
+            prevColor = wb.penColor;
+            prevStroke = wb.penStroke;
+            wb.penColor = 'white';
+            wb.penStroke = wb.eraseStroke;
+            document.getElementById("erase").innerHTML =
+                "<span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span> Eraser ON";
+            erasing = true;
         }
     };
 
