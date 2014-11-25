@@ -8,6 +8,12 @@ var WBAPP = (function() {
 
     wb.canvas = document.getElementById("myCanvas");
 
+    //$("#myTab").find("li").click(function(){
+    //    var can = $(this).prop('id');
+    //    //wb.canvas = document.getElementById($(this).attribute('id'));
+    //    console.log(can);
+    //});
+
     wb.width = window.innerWidth;
     wb.height = window.innerHeight * 0.944;
 
@@ -20,7 +26,7 @@ var WBAPP = (function() {
     var prevColor, prevStroke;
 
     wb.changeColor = function (color) {
-        if (erasing === true) { wb.erase() }
+        if (erasing === true) { wb.erase(); }
         wb.penColor = color;
     };
 
@@ -73,6 +79,10 @@ var WBAPP = (function() {
         var $dropdown = $(this);
         wb.eraseStroke = $dropdown.val();
         if (erasing === true) { wb.penStroke = wb.eraseStroke; }
+    });
+    
+    $(window).bind('beforeunload', function(){
+        return "Save your drawing before reloading!";
     });
 
     return wb;

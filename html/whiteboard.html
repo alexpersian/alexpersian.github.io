@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
+        <meta name="viewport" content="initial-scale = 1.0, user-scalable = no">
         <meta charset="UTF-8">
         <title>Whiteboard</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../styles/button-custom.css">
+
+        <!-- Prevent scrolling of page -->
+        <script type="text/javascript">
+            document.addEventListener('touchmove', function(event) {
+                event.preventDefault();
+            }, false);
+        </script>
 
     </head>
     <body>
         ||
         <!-- Drawing colors -->
-        <button type="button" class="btn btn-inverse" id="penBlack" onclick="WBAPP.changeColor('black')">
+        <button type="button" class="btn btn-custom" id="penBlack" onclick="WBAPP.changeColor('black')">
             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Black
         </button>
         <button type="button" class="btn btn-danger" id="penRed" onclick="WBAPP.changeColor('red')">
             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Red
         </button>
-        <button type="button" class="btn btn-primary" id="penBlue" onclick="WBAPP.changeColor('blue')">
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Blue
-        </button>
         <button type="button" class="btn btn-success" id="penGreen" onclick="WBAPP.changeColor('green')">
             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Green
+        </button>
+        <button type="button" class="btn btn-primary" id="penBlue" onclick="WBAPP.changeColor('blue')">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Blue
         </button>
         ||
         Pen Width
@@ -54,14 +63,38 @@
             </label>
         </div>
         ||
+        <!-- Save function -->
         <a href="#" class="button btn btn-default" id="btn-save">
             <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Save
         </a>
-
-        <canvas id="myCanvas"></canvas>
+        ||
+        <!--Drawing tabs-->
+        <!--<div class="bs-example">-->
+            <!--<ul class="nav nav-tabs" id="myTab">-->
+                <!--<li class="active"><a data-toggle="tab" href="#board1" id="b1">Board 1</a></li>-->
+                <!--<li><a data-toggle="tab" href="#board2" id="b2">Board 2</a></li>-->
+                <!--<li><a data-toggle="tab" href="#board3" id="b3">Board 3</a></li>-->
+                <!--<li><a data-toggle="tab" href="#board4" id="b4">Board 4</a></li>-->
+            <!--</ul>-->
+            <!--<div class="tab-content">-->
+                <!--<div id="board1" class="tab-pane fade in active">-->
+                    <!--<canvas id="myCanvas"></canvas>-->
+                <!--</div>-->
+                <!--<div id="board2" class="tab-pane fade">-->
+                    <!--<canvas id="yourCanvas"></canvas>-->
+                <!--</div>-->
+                <!--<div id="board3" class="tab-pane fade">-->
+                    <!--<canvas id="theirCanvas"></canvas>-->
+                <!--</div>-->
+                <!--<div id="board4" class="tab-pane fade">-->
+                    <!--<canvas id="ourCanvas"></canvas>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
 
         <!-- External scripts -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
         <!-- Internal scripts -->
         <script type="text/javascript" src="../scripts/paper-full.js"></script>
