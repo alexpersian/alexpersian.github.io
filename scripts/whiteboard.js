@@ -3,16 +3,14 @@
  */
 
 // Main Javascript functions and code.
-var WBAPP = (function() {
-
-    paper.install(window);
+var $WBAPP = (function() {
 
     var wb = {};
 
     wb.canvas = document.getElementById("myCanvas");
 
     wb.width = window.innerWidth;
-    wb.height = window.innerHeight * 0.944;
+    wb.height = window.innerHeight * 0.928;
 
     wb.canvas.width = wb.width;
     wb.canvas.height = wb.height;
@@ -71,17 +69,17 @@ var WBAPP = (function() {
 
     // Load a saved whiteboard file onto the canvas.
     // TODO: Fix loading functionality
-    //var loadButton = document.getElementById('btn-load');
-    //loadButton.addEventListener('change', function(e) {
+    //document.getElementById('btn-load').addEventListener('change', function(e) {
     //
     //    var reader = new FileReader();
     //    reader.onload = function(event) {
     //        console.log("omg freak out");
-    //        var img = new Image();
-    //        img.onload = function() {
-    //            PAPER.loadRaster(img);
+    //        var imgur = new Image();
+    //        imgur.onload = function() {
+    //            console.log("blarg");
+    //            $WBPAPER.loadRaster(img);
     //        };
-    //        img.src = event.target.result;
+    //        imgur.src = event.target.result;
     //    };
     //    reader.readAsDataURL(this.files[0]);
     //
@@ -89,13 +87,13 @@ var WBAPP = (function() {
 
     wb.changePenWidth = function(width) {
         wb.penStroke = width;
-        document.getElementById('penDisplay').innerHTML = "Pen Width: " + width;
+        document.getElementById('penDisplay').innerHTML = "Pen Width: " + width + " <span class=\"caret\"></span>";
     };
 
     wb.changeEraserWidth = function(width) {
         wb.eraseStroke = width;
         if (wb.erasing == true) {wb.penStroke = wb.eraseStroke; }
-        document.getElementById('eraseDisplay').innerHTML = "Eraser Width: " + width;
+        document.getElementById('eraseDisplay').innerHTML = "Eraser Width: " + width + " <span class=\"caret\"></span>";
     };
 
     // Ensures that drawings aren't unintentionally lost when navigating away from page.
@@ -109,4 +107,4 @@ var WBAPP = (function() {
     }, false);
 
     return wb;
-}());
+}($WBAPP = $WBAPP || {}));
