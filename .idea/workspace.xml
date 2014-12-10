@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06816522-7bfb-4b53-bf01-dcddd117f5a9" name="Default" comment="Banana phone added to repo">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/bs-custom.css" afterPath="$PROJECT_DIR$/styles/bs-custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/wb-paper.js" afterPath="$PROJECT_DIR$/scripts/wb-paper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/whiteboard.html" afterPath="$PROJECT_DIR$/html/whiteboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/whiteboard.js" afterPath="$PROJECT_DIR$/scripts/whiteboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alexpersian.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/blackboard.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="25" />
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="26" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
               </folding>
@@ -67,18 +63,18 @@
       <file leaf-file-name="whiteboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/whiteboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.083333" vertical-offset="1093" max-vertical-offset="1845">
+            <state vertical-scroll-proportion="-55.625" vertical-offset="0" max-vertical-offset="1845">
               <caret line="89" column="81" selection-start-line="89" selection-start-column="81" selection-end-line="89" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="whiteboard.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="whiteboard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/whiteboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-73.26923" vertical-offset="0" max-vertical-offset="2145">
-              <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.6713917" vertical-offset="1504" max-vertical-offset="2280">
+              <caret line="137" column="38" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
               </folding>
@@ -86,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wb-paper.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wb-paper.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/wb-paper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38659793" vertical-offset="210" max-vertical-offset="1890">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1890">
               <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
@@ -145,9 +141,9 @@
         <option value="$PROJECT_DIR$/html/blackboard.html" />
         <option value="$PROJECT_DIR$/scripts/blackboard.js" />
         <option value="$PROJECT_DIR$/styles/bs-custom.css" />
-        <option value="$PROJECT_DIR$/scripts/whiteboard.js" />
         <option value="$PROJECT_DIR$/html/whiteboard.html" />
         <option value="$PROJECT_DIR$/scripts/wb-paper.js" />
+        <option value="$PROJECT_DIR$/scripts/whiteboard.js" />
       </list>
     </option>
   </component>
@@ -707,16 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/bb-paper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/blackboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="315">
@@ -733,20 +719,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/blackboard.js">
+    <entry file="file://$PROJECT_DIR$/scripts/bb-paper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
           <folding>
             <element signature="e#0#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/whiteboard.js">
+    <entry file="file://$PROJECT_DIR$/scripts/blackboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-73.26923" vertical-offset="0" max-vertical-offset="2145">
-          <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="26" />
           <folding>
             <element signature="e#0#46#0" expanded="false" />
           </folding>
@@ -755,7 +741,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/whiteboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.083333" vertical-offset="1093" max-vertical-offset="1845">
+        <state vertical-scroll-proportion="-55.625" vertical-offset="0" max-vertical-offset="1845">
           <caret line="89" column="81" selection-start-line="89" selection-start-column="81" selection-end-line="89" selection-end-column="81" />
           <folding />
         </state>
@@ -763,8 +749,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/wb-paper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38659793" vertical-offset="210" max-vertical-offset="1890">
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1890">
           <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/whiteboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6713917" vertical-offset="1504" max-vertical-offset="2280">
+          <caret line="137" column="38" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
           <folding>
             <element signature="e#0#46#0" expanded="false" />
           </folding>

@@ -29,11 +29,6 @@ var $WBAPP = (function() {
         event.preventDefault();
     }, false);
 
-    wb.changeColor = function (color) {
-        if (wb.erasing === true) { wb.erase(); }
-        wb.penColor = color;
-    };
-
     // Hacky way to handle the eraser functionality.
     // Draws over the canvas with a white pen stroke.
     // Changes the text in the eraser button to reflect the mode.
@@ -94,6 +89,15 @@ var $WBAPP = (function() {
     //
     //}, false);
 
+    wb.changeColor = function (color) {
+        if (wb.erasing === true) { wb.erase(); }
+        if (wb.night  && (wb.penColor === 'black' || color === 'black')) {
+            wb.penColor = '#495F66'
+        } else {
+            wb.penColor = color;
+        }
+    };
+
     wb.changePenWidth = function(width) {
         wb.penStroke = width;
         document.getElementById('penDisplay').innerHTML = "Pen Width: " + width + " <span class=\"caret\"></span>";
@@ -123,14 +127,19 @@ var $WBAPP = (function() {
     wb.nightTheme = function() {
         if (!wb.night) {
             document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>";
-            wb.bgColor = '#012129';
+            wb.bgColor = '#01191F';
+            if (wb.penColor = 'black') {
+                wb.penColor = '#495F66';
+            }
             wb.night = true;
         } else {
             document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>";
             wb.bgColor = '#ffffff';
+            if (wb.penColor = '#495F66') {
+                wb.penColor = 'black';
+            }
             wb.night = false;
         }
-
         $WBPAPER.drawBackground();
         console.log(wb.bgColor);
     };
