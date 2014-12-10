@@ -16,9 +16,18 @@ var $WBAPP = (function() {
     wb.canvas.height = wb.height;
 
     wb.penColor = 'black';
+    wb.bgColor = 'white';
     wb.penStroke = 5;
     wb.eraseStroke = 50;
     var prevColor, prevStroke;
+
+    wb.shape = 'Start/End';
+    wb.night = false;
+
+    // Prevents default page scrolling action; fixes iOS 8 drawing bug.
+    document.addEventListener('touchmove', function(event) {
+        event.preventDefault();
+    }, false);
 
     wb.changeColor = function (color) {
         if (wb.erasing === true) { wb.erase(); }
@@ -40,7 +49,7 @@ var $WBAPP = (function() {
         } else {
             prevColor = wb.penColor;
             prevStroke = wb.penStroke;
-            wb.penColor = 'white';
+            wb.penColor = wb.bgColor;
             wb.penStroke = wb.eraseStroke;
             document.getElementById("erase").innerHTML =
                 "<span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span> Eraser ON";
@@ -97,14 +106,34 @@ var $WBAPP = (function() {
     };
 
     // Ensures that drawings aren't unintentionally lost when navigating away from page.
-    $(window).bind('beforeunload', function(){
+    $(window).bind('beforeunload', function() {
         return "Save your drawing before reloading!";
     });
 
-    // Prevents default page scrolling action; fixes iOS 8 drawing bug.
-    document.addEventListener('touchmove', function(event) {
-        event.preventDefault();
-    }, false);
+    wb.changeShape = function(shape) {
+        wb.shape = shape;
+        document.getElementById('shapeChoice').innerHTML = shape + " <span class=\"caret\"></span>";
+    };
+
+    $('#createShape').click(function() {
+        $WBPAPER.drawing = false;
+        $WBPAPER.drawShape(wb.shape);
+    });
+
+    wb.nightTheme = function() {
+        if (!wb.night) {
+            document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>";
+            wb.bgColor = '#012129';
+            wb.night = true;
+        } else {
+            document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>";
+            wb.bgColor = '#ffffff';
+            wb.night = false;
+        }
+
+        $WBPAPER.drawBackground();
+        console.log(wb.bgColor);
+    };
 
     return wb;
 }($WBAPP = $WBAPP || {}));
