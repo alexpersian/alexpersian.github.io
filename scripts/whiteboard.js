@@ -10,7 +10,7 @@ var $WBAPP = (function() {
     wb.canvas = document.getElementById("myCanvas");
 
     wb.width = window.innerWidth;
-    wb.height = window.innerHeight * 0.928;
+    wb.height = window.innerHeight * 0.95;
 
     wb.canvas.width = wb.width;
     wb.canvas.height = wb.height;
