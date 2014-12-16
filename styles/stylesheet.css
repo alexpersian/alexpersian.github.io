@@ -200,6 +200,13 @@ a.button span {
   margin-right: 2px;
 }
 
+#ajax span {
+  background: transparent url(../images/ajax.png) 12px 50% no-repeat;
+}
+#ajax {
+  margin-right: 2px;
+}
+
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
   color: #222;

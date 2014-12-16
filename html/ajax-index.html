@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Alex's AJAX Practic</title>
+		<link rel='stylesheet' href='../styles/ajax-style.css' />
+	</head>
+	<body>
+		<h1>jQuery AJAX Practice</h1>
+
+		<h2>Your Friends! (hint: you have none)</h2>
+
+		<ul id="friends"></ul>
+
+		<template id="friend-template">
+			<li data-id="{{id}}">
+				<strong>Name: </strong> 
+				<span class="noedit name">{{name}}</span>
+				<input class="edit name"/>
+
+				<strong>Age: </strong>
+				<span class="noedit age">{{age}}</span>
+				<input class="edit age"/>
+				
+				<p>
+				<button data-id='{{id}}' class='remove'>x</button>
+				<button class="editFriend noedit">Edit</button>
+				<button class="cancelEdit edit">Cancel</button>
+				<button class="saveEdit edit">Save</button>
+				</p>
+			</li>
+		</template>
+
+		<h4>Add Your Non-Existent Friends</h4>
+		<p>Name: <input type="text" id="name"></p>
+		<p>Age: <input type="text" id="age"></p>
+		<button id="add-friend">Add!</button>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../scripts/ajax-app.js"></script>
+		<script type="text/javascript" src="../scripts/mustache.js"></script>
+	</body>
+</html>
