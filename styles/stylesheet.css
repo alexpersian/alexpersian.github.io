@@ -173,7 +173,7 @@ a.button span {
 }
 
 #every-picture span {
-    background: transparent url(../images/picture-icon.png) 12px 50% no-repeat;
+    background: transparent url(../images/pixels.png) 12px 50% no-repeat;
 }
 #every-picture {
     margin-right: 2px;
@@ -194,7 +194,7 @@ a.button span {
 }
 
 #whiteboard span {
-  background: transparent url(../images/pixels.png) 12px 50% no-repeat;
+  background: transparent url(../images/papers.png) 12px 50% no-repeat;
 }
 #whiteboard {
   margin-right: 2px;
