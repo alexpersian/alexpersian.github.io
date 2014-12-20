@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06816522-7bfb-4b53-bf01-dcddd117f5a9" name="Default" comment="Banana phone added to repo">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/whiteboard.html" afterPath="$PROJECT_DIR$/html/whiteboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/whiteboard.js" afterPath="$PROJECT_DIR$/scripts/whiteboard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pixels.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/stylesheet.css" afterPath="$PROJECT_DIR$/styles/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alexpersian.github.io.iws" />
@@ -28,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="whiteboard.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="whiteboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/whiteboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44148937" vertical-offset="718" max-vertical-offset="1920">
-              <caret line="70" column="64" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
+            <state vertical-scroll-proportion="-39.458332" vertical-offset="103" max-vertical-offset="1920">
+              <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -53,18 +53,28 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75" vertical-offset="165" max-vertical-offset="1050">
+            <state vertical-scroll-proportion="-8.208333" vertical-offset="298" max-vertical-offset="1050">
               <caret line="33" column="61" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2610" max-vertical-offset="6285">
-              <caret line="174" column="21" selection-start-line="174" selection-start-column="21" selection-end-line="174" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.40592784" vertical-offset="2625" max-vertical-offset="6285">
+              <caret line="196" column="50" selection-start-line="196" selection-start-column="50" selection-end-line="196" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -122,9 +132,9 @@
         <option value="$PROJECT_DIR$/styles/ajax-style.css" />
         <option value="$PROJECT_DIR$/html/ajax-index.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/styles/stylesheet.css" />
         <option value="$PROJECT_DIR$/scripts/whiteboard.js" />
         <option value="$PROJECT_DIR$/html/whiteboard.html" />
+        <option value="$PROJECT_DIR$/styles/stylesheet.css" />
       </list>
     </option>
   </component>
@@ -601,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="776">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/hammer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05798969" vertical-offset="0" max-vertical-offset="37020">
@@ -716,22 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6285">
-          <caret line="174" column="21" selection-start-line="174" selection-start-column="21" selection-end-line="174" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75" vertical-offset="165" max-vertical-offset="1050">
-          <caret line="33" column="61" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/ajax-index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39893618" vertical-offset="0" max-vertical-offset="752">
@@ -752,8 +739,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/whiteboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44148937" vertical-offset="718" max-vertical-offset="1920">
-          <caret line="70" column="64" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
+        <state vertical-scroll-proportion="-39.458332" vertical-offset="103" max-vertical-offset="1920">
+          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.208333" vertical-offset="298" max-vertical-offset="1050">
+          <caret line="33" column="61" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40592784" vertical-offset="2625" max-vertical-offset="6285">
+          <caret line="196" column="50" selection-start-line="196" selection-start-column="50" selection-end-line="196" selection-end-column="50" />
           <folding />
         </state>
       </provider>
