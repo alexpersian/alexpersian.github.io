@@ -144,5 +144,15 @@ var $WBAPP = (function() {
         console.log(wb.bgColor);
     };
 
+    wb.clear = function() {
+        if (!wb.night) {
+            wb.bgColor = '#ffffff';
+        } else {
+            wb.bgColor = '#01191F';
+        }
+        $WBPAPER.drawBackground();
+        console.log(wb.bgColor);
+    };
+
     return wb;
 }($WBAPP = $WBAPP || {}));
