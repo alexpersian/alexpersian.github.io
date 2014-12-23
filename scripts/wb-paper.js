@@ -28,7 +28,6 @@ var $WBPAPER = window.onload = (function() {
         var rectangle = new paper.Rectangle(new paper.Point(0, 0), new paper.Point($WBAPP.width, $WBAPP.height));
         var rectPath = new paper.Path.Rectangle(rectangle);
         rectPath.fillColor = $WBAPP.bgColor;
-        console.log('drawing');
     };
     lp.drawBackground();
 

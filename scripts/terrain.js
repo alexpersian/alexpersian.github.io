@@ -10,10 +10,10 @@ $(document).ready(function() {
 
     function init() {
         width = window.innerWidth - 16;
-        height = 700;
+        height = window.innerHeight - 16;
 
-        meshWidth = 10;
-        meshHeight = 10;
+        meshWidth = 20;
+        meshHeight = 20;
 
         // Scene
         scene = new THREE.Scene();
@@ -34,7 +34,7 @@ $(document).ready(function() {
         //light.position.set(-60, 20, 100);
 
         // Plane geometry
-        geometry = new THREE.PlaneGeometry(5000, 5000, meshWidth, meshHeight);
+        geometry = new THREE.PlaneGeometry(10000, 10000, meshWidth, meshHeight);
         texture = new THREE.ImageUtils.loadTexture("../images/terrain-texture.png");
         material = new THREE.MeshBasicMaterial({
             //wireframe: true,
@@ -43,7 +43,7 @@ $(document).ready(function() {
         plane = new THREE.Mesh(geometry, material);
 
         scene.add(plane);
-        scene.fog = new THREE.FogExp2(0x9CDBFF, 0.0003);
+        scene.fog = new THREE.FogExp2(0x9CDBFF, 0.0001);
 
         // Renderer
         renderer = new THREE.WebGLRenderer();
@@ -66,7 +66,7 @@ $(document).ready(function() {
         for (var i = 0; i < j; i++) {
             geometry.vertices[i].z = Math.floor(
                 3 * (Math.sin(Math.random())) *
-                3 * (Math.cos(Math.random())) * 50);
+                4 * (Math.sin(Math.random())) * 70);
             
             //geometry.vertices[i].z = (Math.pow((Math.random() + 0.1), -1)) * 10;
             //geometry.vertices[findIndex()] = (Math.seedrandom(i));

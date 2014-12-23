@@ -1,14 +1,14 @@
 $(document).ready(function (){
     // inner window size constants
-    var WIDTH = 1100;
-    var HEIGHT = 800;
+    var WIDTH = window.innerWidth - 48;
+    var HEIGHT = window.innerHeight - 68;
 
     var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
 
     // set canvas size
-    context.canvas.width = WIDTH;
-    context.canvas.height = HEIGHT;
+    canvas.width = WIDTH;
+    canvas.height = HEIGHT;
 
     // defines the pixel density of display
     var pixelRows = 10;
@@ -18,7 +18,7 @@ $(document).ready(function (){
     var pixelRowPos = 0;
     var pixelColPos = 0;
 
-    var pixelWidth = 110;
+    var pixelWidth = 150;
     var pixelHeight = 80;
 
     var colorBase = 4;
