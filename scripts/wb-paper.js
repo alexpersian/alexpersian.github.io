@@ -7,14 +7,13 @@
 
 var $WBPAPER = window.onload = (function() {
 
-    paper.install(window);
     paper.setup($WBAPP.canvas);
 
     var lp = {};
 
     var myPath, shapePath;
-    var tool = new Tool();
-    var mousePoint = view.center;
+    var tool = new paper.Tool();
+    var mousePoint = paper.view.center;
     lp.drawing = true;
 
     var hitOptions = {
@@ -28,6 +27,7 @@ var $WBPAPER = window.onload = (function() {
         var rectangle = new paper.Rectangle(new paper.Point(0, 0), new paper.Point($WBAPP.width, $WBAPP.height));
         var rectPath = new paper.Path.Rectangle(rectangle);
         rectPath.fillColor = $WBAPP.bgColor;
+        paper.view.update();
     };
     lp.drawBackground();
 
