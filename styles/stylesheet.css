@@ -201,6 +201,13 @@ a.button span {
   margin-right: 2px;
 }
 
+#spotify span {
+  background: transparent url(../images/spotify-logo-sm.png) 12px 50% no-repeat;
+}
+#spotify {
+  margin-right: 2px;
+}
+
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
   color: #222;
