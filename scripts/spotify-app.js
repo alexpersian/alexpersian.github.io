@@ -18,7 +18,7 @@ $(function() {
 
     // Event listeners for buttons
     $('#search').click(function getInfo() {
-        $('#current-artist').html('<img src="ajax-loader.gif">');
+        $('#current-artist').html('<img src="../images/ajax-loader.gif">');
         var query = $("#query").val();
         $('#query').val('');
         console.log(query);
