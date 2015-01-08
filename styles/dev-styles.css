@@ -114,7 +114,7 @@ iframe {
 /* ======= Header ======= */
 .header {
   padding: 30px 0;
-  background: #FFF3F0;
+  background: #f8fcff;
   border-top: 10px solid #778492;
 }
 .header .btn {
@@ -123,6 +123,10 @@ iframe {
 }
 .header .profile-image {
   margin-right: 30px;
+    padding: 1px;
+    border: 2px solid;
+    border-color: #1A455A;
+    border-radius: 50%;
 }
 .header .profile-content .name {
   color: #49515a;
@@ -170,7 +174,7 @@ iframe {
   margin-bottom: 30px;
 }
 .section .section-inner {
-  background: #FFF3F0;
+  background: #f8fcff;
   padding: 30px;
 }
 .section .heading {
