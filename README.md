@@ -1,4 +1,4 @@
-alexpersian.github.io
+www.alexpersian.com
 =====================
 
 This is my own development website. I am not affiliated with any companies or organizations.
