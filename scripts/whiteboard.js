@@ -17,7 +17,7 @@ var $WBAPP = (function() {
 
     wb.penColor = 'black';
     wb.bgColor = 'white';
-    wb.penStroke = 5;
+    wb.penStroke = 3;
     wb.eraseStroke = 50;
     var prevColor, prevStroke;
 
@@ -71,28 +71,23 @@ var $WBAPP = (function() {
         saveButton.href = wb.canvas.toDataURL('image/svg');
     });
 
-    // Load a saved whiteboard file onto the canvas.
-    // TODO: Fix loading functionality
-    //document.getElementById('btn-load').addEventListener('change', function(e) {
-    //
-    //    var reader = new FileReader();
-    //    reader.onload = function(event) {
-    //        console.log("omg freak out");
-    //        var imgur = new Image();
-    //        imgur.onload = function() {
-    //            console.log("blarg");
-    //            $WBPAPER.loadRaster(img);
-    //        };
-    //        imgur.src = event.target.result;
-    //    };
-    //    reader.readAsDataURL(this.files[0]);
-    //
-    //}, false);
-
     wb.changeColor = function (color) {
         if (wb.erasing === true) { wb.erase(); }
-        if (wb.night  && (wb.penColor === 'black' || color === 'black')) {
-            wb.penColor = '#495F66'
+        if (wb.night) {
+            switch (color) {
+                case 'black':
+                    wb.penColor = '#495F66';
+                    break;
+                case 'red':
+                    wb.penColor = '#dc322f';
+                    break;
+                case 'blue':
+                    wb.penColor = '#268bd2';
+                    break;
+                case 'green':
+                    wb.penColor = '#859900';
+                    break;
+            }
         } else {
             wb.penColor = color;
         }
@@ -128,15 +123,37 @@ var $WBAPP = (function() {
         if (!wb.night) {
             document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>";
             wb.bgColor = '#01191F';
-            if (wb.penColor = 'black') {
-                wb.penColor = '#495F66';
+            switch (wb.penColor) {
+                case 'black':
+                    wb.penColor = '#495F66';
+                    break;
+                case 'red':
+                    wb.penColor = '#dc322f';
+                    break;
+                case 'blue':
+                    wb.penColor = '#268bd2';
+                    break;
+                case 'green':
+                    wb.penColor = '#859900';
+                    break;
             }
             wb.night = true;
         } else {
             document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>";
             wb.bgColor = '#ffffff';
-            if (wb.penColor = '#495F66') {
-                wb.penColor = 'black';
+            switch (wb.penColor) {
+                case '#495F66':
+                    wb.penColor = 'black';
+                    break;
+                case '#dc322f':
+                    wb.penColor = 'red';
+                    break;
+                case '#268bd2':
+                    wb.penColor = 'blue';
+                    break;
+                case '#859900':
+                    wb.penColor = 'green';
+                    break;
             }
             wb.night = false;
         }
@@ -153,6 +170,24 @@ var $WBAPP = (function() {
         $WBPAPER.drawBackground();
         console.log(wb.bgColor);
     };
+
+    // Load a saved whiteboard file onto the canvas.
+    // TODO: Fix loading functionality
+    //document.getElementById('btn-load').addEventListener('change', function(e) {
+    //
+    //    var reader = new FileReader();
+    //    reader.onload = function(event) {
+    //        console.log("omg freak out");
+    //        var imgur = new Image();
+    //        imgur.onload = function() {
+    //            console.log("blarg");
+    //            $WBPAPER.loadRaster(img);
+    //        };
+    //        imgur.src = event.target.result;
+    //    };
+    //    reader.readAsDataURL(this.files[0]);
+    //
+    //}, false);
 
     return wb;
 }($WBAPP = $WBAPP || {}));

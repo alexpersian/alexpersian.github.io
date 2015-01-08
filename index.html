@@ -1,67 +1,221 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="styles/stylesheet.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="styles/pygment_trac.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="styles/print.css" media="print">
-        <link rel="icon" href="favicon.png">
-        <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <title>Alex Persian</title>
-    </head>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>Alex Persian's Personal Website</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="styles/dev-styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-    <body>
-        <div id="container">
-            <div class="inner">
+</head>
 
-                <header>
-                    <img src="images/profile-image.png" id="profile-image">
-                    <h1>Alex Persian</h1>
-                    <h2>Student Developer</h2>
-                </header>
+<body>
+<!-- ******HEADER****** -->
+<header class="header">
+    <div class="container">
+        <img class="profile-image img-responsive pull-left" src="images/profile-image-lg.png" alt="James Lee" />
+        <div class="profile-content pull-left">
+            <h1 class="name">Alex Persian</h1>
+            <h2 class="desc">Student Developer</h2>
+            <ul class="social list-inline">
+                <li><a href="https://twitter.com/alex_persian" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/alexpersian" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/alexpersian" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+                <li><a href="http://codepen.io/alexpersian/" target="_blank"><i class="fa fa-codepen"></i></a></li>
+                <li class="last-item">
+            </ul>
+        </div><!--//profile-->
+        <a class="btn btn-cta-primary btn-custom pull-right" href="mailto:alex_persian@me.com"><i class="fa fa-paper-plane"></i> Contact Me</a>
+    </div><!--//container-->
+</header><!--//header-->
 
-                <hr>
+<div class="container sections-wrapper">
+    <div class="row">
+        <div class="primary col-md-8 col-sm-12 col-xs-12">
+            <section class="about section">
+                <div class="section-inner">
+                    <h2 class="heading">About Me</h2>
+                    <div class="content">
+                        <p>Student/geek from the cold north (Minnesota) studying software engineering. The possibilities
+                            I've found for web apps has really hooked me, and I'm hoping to advance my work in the
+                            web development industry. The projects on this page have been created by myself through
+                            experimentation and self-teaching.
+                        </p>
+                    </div><!--//content-->
+                </div><!--//section-inner-->
+            </section><!--//section-->
 
-                <h3>Projects</h3>
+            <section class="latest section">
+                <div class="section-inner">
+                    <h2 class="heading">Latest Projects</h2>
+                    <div class="content">
 
-                <section id="downloads" class="clearfix">
-                    <a href="html/spotify-app.html" id="spotify" class="button"><span>Spotify Search</span></a>
-                    <a href="html/whiteboard.html" id="whiteboard" class="button"><span>Whiteboard</span></a>
-                    <a href="html/ajax-index.html" id="ajax" class="button"><span>AJAX/jQuery</span></a>
-                    <a href="slaughterfest99/slaughterfest99.html" id="slaughterfest99" class="button"><span>Multiplayer FPS</span></a>
-                    <a href="html/terrain.html" id="terrain-generator" class="button"><span>Terrain Generator</span></a>
-                    <a href="html/picture.html" id="every-picture" class="button"><span>Every Picture</span></a>
-                    <a href="html/three_test.html" id="three-js" class="button"><span>three.js Test</span></a>
-                </section>
+                        <!-- Spotify Search -->
+                        <div class="item featured text-center">
+                            <h3 class="title"><a href="http://alexpersian.com/html/spotify-app.html" target="_blank">Spotify Search</a></h3>
+                            <p class="summary">Search for artists, get album artwork, and listen to song clips.</p>
+                            <div class="featured-image">
+                                <a href="http://alexpersian.com/html/spotify-app.html" target="_blank">
+                                    <img class="img-responsive project-image" src="images/project-images/spotify-app.png" alt="project name" />
+                                </a>
+                                <div class="ribbon">
+                                    <div class="text">New</div>
+                                </div>
+                            </div>
 
-                <hr>
+                            <div class="desc text-left">
+                                <p>The other day I was browsing API's and found out that Spotify has a public one. This sparked my
+                                    interest in learning more about API's and handling server calls, so I thought up this web app to build.</p>
+                                <p>It's built by leveraging the
+                                    <a href="https://developer.spotify.com/web-api/" target="_blank">Spotify Web API</a>.
+                                    Along with a simple artist search, it displays album artwork, shows related artists,
+                                    and you can click on an album to hear a song clip. Related artists are also clickable,
+                                    and they will return the albums for that artist. This was a really fun app to build,
+                                    and I hope that you have fun using it as well.
+                                </p>
+                            </div><!--//desc-->
+                        </div>
+                        <!-- //Spotify Search -->
 
-                <section id="main_content">
-                    <h3>
-                        <a name="about-me" class="anchor" href="#about-me"><span class="octicon octicon-link"></span></a>About Me
-                    </h3>
-                    <p>Student/geek from the cold north (Minnesota) studying computer science. Studying software engineering, and hoping to work in the web development industry.</p>
-                    <h3>
-                        <a name="blog-feed" class="anchor" href="#blog-feed"><span class="octicon octicon-link"></span></a>Blog Feed
-                    </h3>
-                    <p>To be continued...</p>
-                    <h3>
-                        <a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact
-                    </h3>
-                    <p>
-                        You can reach me on <a href="https://twitter.com/alex_persian">Twitter</a> or through my personal <a href="mailto:alex_persian@me.com">email</a>.<br>
-                        My code is available on <a href="https://github.com/alexpersian">Github</a> and <a href="http://codepen.io/alexpersian/">Codepen</a>.
-                    </p>
-                </section>
+                        <hr class="divider" />
 
-                <footer>
-                    This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-                </footer>
-            </div>
+                        <!-- Whiteboard -->
+                        <div class="item row">
+                            <a class="col-md-4 col-sm-4 col-xs-12" href="http://alexpersian.com/html/whiteboard.html" target="_blank">
+                                <img class="img-responsive project-image" src="images/project-images/whiteboard.png" alt="project name" />
+                            </a>
+                            <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                <h3 class="title"><a href="http://alexpersian.com/html/whiteboard.html" target="_blank">Whiteboard - Brainstorm in the Browser</a></h3>
+                                <p>
+                                    At work we came across a library called
+                                    <a href="http://paperjs.org/" target="_blank">paper.js</a>
+                                    that allows for manipulation of elements on the canvas. This project is an extension of that
+                                    library to allow for whiteboarding within the browser. Has an optional night theme.
+                                </p>
+                                <p><a class="more-link" href="http://alexpersian.com/html/whiteboard.html" target="_blank"><i class="fa fa-external-link"></i> Check it out</a></p>
+                            </div><!--//desc-->
+                        </div>
+                        <!-- //Whiteboard -->
+
+                        <!-- Multi-FPS -->
+                        <div class="item row">
+                            <a class="col-md-4 col-sm-4 col-xs-12" href="http://alexpersian.com/slaughterfest99/slaughterfest99.html" target="_blank">
+                                <img class="img-responsive project-image" src="images/project-images/multi-fps.png" alt="project name" />
+                            </a>
+                            <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                <h3 class="title"><a href="http://alexpersian.com/slaughterfest99/slaughterfest99.html" target="_blank">Multiplayer FPS - Slayer with Your Friends</a></h3>
+                                <p>
+                                    Over the summer I became interested in game development, and I started working with the
+                                    <a href="http://unity3d.com/" target="_blank">Unity Game Engine</a>.
+                                    This project is one of my more successful attempts to create a working game. It still needs work,
+                                    but right now it has multiplayer and handles all of the basic functions.
+                                </p>
+                                <p><a class="more-link" href="http://alexpersian.com/slaughterfest99/slaughterfest99.html" target="_blank"><i class="fa fa-external-link"></i> Check it out</a></p>
+                            </div><!--//desc-->
+                        </div>
+                        <!-- //Multi-FPS -->
+
+                        <!-- AJAX -->
+                        <div class="item row">
+                            <a class="col-md-4 col-sm-4 col-xs-12" href="http://alexpersian.com/html/ajax-index.html" target="_blank">
+                                <img class="img-responsive project-image" src="images/project-images/ajax-app.png" alt="project name" />
+                            </a>
+                            <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                <h3 class="title"><a href="http://alexpersian.com/html/ajax-index.html" target="_blank">AJAX - Experimenting with Server Calls</a></h3>
+                                <p>
+                                    Learning experiment that uses AJAX and an external API tied to a database to store
+                                    information. The page is dynamically updated based on the information that is
+                                    present within the database.
+                                </p>
+                                <p><a class="more-link" href="http://alexpersian.com/html/ajax-index.html" target="_blank"><i class="fa fa-external-link"></i> Check it out</a></p>
+                            </div><!--//desc-->
+                        </div>
+                        <!-- //AJAX -->
+
+                        <!-- Random Terrain -->
+                        <div class="item row">
+                            <a class="col-md-4 col-sm-4 col-xs-12" href="http://alexpersian.com/html/terrain.html" target="_blank">
+                                <img class="img-responsive project-image" src="images/project-images/random-terrain.png" alt="project name" />
+                            </a>
+                            <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                <h3 class="title"><a href="http://alexpersian.com/html/terrain.html" target="_blank">Terrain - Randomly Generated Terrain</a></h3>
+                                <p>
+                                    Using
+                                    <a href="http://threejs.org/" target="_blank">three.js</a>
+                                    to visualize a randomly generated terrain. This project uses
+                                    multiple modified sine and cosine waves to create a randomized terrain structure.
+                                    That is then displayed to the canvas using three.js.
+                                </p>
+                                <p><a class="more-link" href="http://alexpersian.com/html/terrain.html" target="_blank"><i class="fa fa-external-link"></i> Check it out</a></p>
+                            </div><!--//desc-->
+                        </div>
+                        <!-- //Random Terrain -->
+
+                        <!-- Pixels -->
+                        <div class="item row">
+                            <a class="col-md-4 col-sm-4 col-xs-12" href="http://alexpersian.com/html/picture.html" target="_blank">
+                                <img class="img-responsive project-image" src="images/project-images/pixel-counter.png" alt="project name" />
+                            </a>
+                            <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                <h3 class="title"><a href="http://alexpersian.com/html/picture.html" target="_blank">Pixels - Every Image Possible</a></h3>
+                                <p>
+                                    Simple canvas manipulation to cycle through all of the colors for a pixel grid.
+                                    The idea for the project arose from the theoretical concept that if a pixel grid
+                                    is cycled through all color combinations it will show all possible pictures.
+                                </p>
+                                <p><a class="more-link" href="http://alexpersian.com/html/picture.html" target="_blank"><i class="fa fa-external-link"></i> Check it out</a></p>
+                            </div><!--//desc-->
+                        </div>
+                        <!-- //Pixels -->
+
+                    </div><!--//content-->
+                </div><!--//section-inner-->
+            </section><!--//section-->
+        </div><!--//primary-->
+
+        <!-- Blog -->
+        <div class="secondary col-md-4 col-sm-12 col-xs-12">
+            <aside class="blog aside section">
+                <div class="section-inner">
+                    <h2 class="heading">RSS Feed (SitePoint)</h2>
+                    <div id="rss-feeds" class="content">
+                    </div><!--//content-->
+                </div><!--//section-inner-->
+            </aside><!--//section-->
         </div>
-    </body>
-</html>
+        <!-- //Blog -->
+
+    </div><!--//row-->
+</div><!--//masonry-->
+
+<!-- ******FOOTER****** -->
+<footer class="footer">
+    <div class="container text-center">
+    </div><!--//container-->
+</footer><!--//footer-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="plugins/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="plugins/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/jquery-rss/dist/jquery.rss.min.js"></script>
+<script type="text/javascript" src="scripts/dev-main.js"></script>
+</body>
+</html> 
+
