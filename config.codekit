@@ -69,79 +69,79 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/profile-image-lg.png": {
-		"fileType": 32768,
+	"\/images\/profile-image-lg.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 57118,
-		"inputAbbreviatedPath": "\/images\/profile-image-lg.png",
-		"outputAbbreviatedPath": "\/images\/profile-image-lg.png",
+		"initialSize": 12454,
+		"inputAbbreviatedPath": "\/images\/profile-image-lg.jpg",
+		"outputAbbreviatedPath": "\/images\/profile-image-lg.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/project-images\/ajax-app.png": {
-		"fileType": 32768,
+	"\/images\/project-images\/ajax-app.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 109675,
-		"inputAbbreviatedPath": "\/images\/project-images\/ajax-app.png",
-		"outputAbbreviatedPath": "\/images\/project-images\/ajax-app.png",
+		"initialSize": 38545,
+		"inputAbbreviatedPath": "\/images\/project-images\/ajax-app.jpg",
+		"outputAbbreviatedPath": "\/images\/project-images\/ajax-app.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/project-images\/multi-fps.png": {
-		"fileType": 32768,
+	"\/images\/project-images\/multi-fps.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 89230,
-		"inputAbbreviatedPath": "\/images\/project-images\/multi-fps.png",
-		"outputAbbreviatedPath": "\/images\/project-images\/multi-fps.png",
+		"initialSize": 60580,
+		"inputAbbreviatedPath": "\/images\/project-images\/multi-fps.jpg",
+		"outputAbbreviatedPath": "\/images\/project-images\/multi-fps.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/project-images\/pixel-counter.png": {
-		"fileType": 32768,
+	"\/images\/project-images\/pixel-counter.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 4051,
-		"inputAbbreviatedPath": "\/images\/project-images\/pixel-counter.png",
-		"outputAbbreviatedPath": "\/images\/project-images\/pixel-counter.png",
+		"initialSize": 7467,
+		"inputAbbreviatedPath": "\/images\/project-images\/pixel-counter.jpg",
+		"outputAbbreviatedPath": "\/images\/project-images\/pixel-counter.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/project-images\/random-terrain.png": {
-		"fileType": 32768,
+	"\/images\/project-images\/random-terrain.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 138145,
-		"inputAbbreviatedPath": "\/images\/project-images\/random-terrain.png",
-		"outputAbbreviatedPath": "\/images\/project-images\/random-terrain.png",
+		"initialSize": 55559,
+		"inputAbbreviatedPath": "\/images\/project-images\/random-terrain.jpg",
+		"outputAbbreviatedPath": "\/images\/project-images\/random-terrain.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/project-images\/spotify-app.png": {
-		"fileType": 32768,
+	"\/images\/project-images\/spotify-app.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 202667,
-		"inputAbbreviatedPath": "\/images\/project-images\/spotify-app.png",
-		"outputAbbreviatedPath": "\/images\/project-images\/spotify-app.png",
+		"initialSize": 46062,
+		"inputAbbreviatedPath": "\/images\/project-images\/spotify-app.jpg",
+		"outputAbbreviatedPath": "\/images\/project-images\/spotify-app.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/project-images\/whiteboard.png": {
-		"fileType": 32768,
+	"\/images\/project-images\/whiteboard.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 16823,
-		"inputAbbreviatedPath": "\/images\/project-images\/whiteboard.png",
-		"outputAbbreviatedPath": "\/images\/project-images\/whiteboard.png",
+		"initialSize": 21367,
+		"inputAbbreviatedPath": "\/images\/project-images\/whiteboard.jpg",
+		"outputAbbreviatedPath": "\/images\/project-images\/whiteboard.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -348,6 +348,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scripts\/handlebars-v2.0.0.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/handlebars-v2.0.0-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/scripts\/min\/dev-main-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/min\/dev-main-min.js",
+		"outputAbbreviatedPath": "\/scripts\/min\/min\/dev-main-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
