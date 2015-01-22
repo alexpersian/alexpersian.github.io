@@ -9,40 +9,43 @@
     <title>Spotify Search</title>
 </head>
 <body>
-    <div class="header">
-        <h1>
-            <img id="header-image" src="../images/spotify-logo-lg.png">
-            Spotify Artist Search
-        </h1>
-    </div>
-    <br>
-    <div class="input-group col-xs-12 search">
-        <input type="text" class="form-control" id="query" placeholder="Artist..."/>
+<div class="header">
+    <h1>
+        <img id="header-image" src="../images/spotify-logo-lg.png">
+        Spotify Artist Search
+    </h1>
+</div>
+<br>
+
+<div class="input-group col-xs-12 search">
+    <input type="text" class="form-control" id="query" placeholder="Artist..."/>
         <span class="input-group-btn">
             <button class="btn btn-success" id="search" type="button">Search</button>
         </span>
-    </div>
-    <div id="current-artist"><br></div>
-    <div class="col-xs-8">
-        <h3>Albums</h3>
-        <div id="artist-results"></div>
-    </div>
-    <div class="col-xs-4">
-        <h3>Related Artists</h3>
-        <div id="related-artists"></div>
-    </div>
-    <script id="search-template" type="text/x-handlebars-template">
-        {{#each albums.items}}
-        <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
-        {{/each}}
-    </script>
-    <script id="related-template" type="text/x-handlebars-template">
-        {{#each artists}}
-        <div style="font-size: 16px" class="artist">{{@key}}{{name}}</div>
-        {{/each}}
-    </script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script type="text/javascript" src="../scripts/handlebars-v2.0.0.js"></script>
-    <script type="text/javascript" src="../scripts/spotify-app.js"></script>
+</div>
+<div id="current-artist"><br></div>
+<div class="col-xs-8">
+    <h3>Albums</h3>
+
+    <div id="artist-results"></div>
+</div>
+<div class="col-xs-4">
+    <h3>Related Artists</h3>
+
+    <div id="related-artists"></div>
+</div>
+<script id="search-template" type="text/x-handlebars-template">
+    {{#each albums.items}}
+    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+    {{/each}}
+</script>
+<script id="related-template" type="text/x-handlebars-template">
+    {{#each artists}}
+    <div style="font-size: 16px" class="artist">{{@key}}{{name}}</div>
+    {{/each}}
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../scripts/vendor/handlebars-v2.0.0.js"></script>
+<script type="text/javascript" src="../scripts/spotify-app.js"></script>
 </body>
 </html>

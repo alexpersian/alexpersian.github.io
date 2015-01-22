@@ -63,47 +63,47 @@ var $WBPAPER = window.onload = (function() {
         shapePath = null;
     };
 
-    lp.drawShape = function(shape) {
-        if (!lp.drawing) {
-            switch(shape) {
-                case 'Start/End':
-                    console.log(shape);
-                    var rect = new paper.Rectangle([0, 0], [200, 60]);
-                    rect.center = mousePoint;
-                    var path = new paper.Path.Rectangle(rect, 30);
-                    path.fillColor = '#F7D4C9';
-                    break;
-                case 'Input/Output':
-                    console.log(shape);
-                    var rect = new paper.Rectangle([0, 0], [200, 60]);
-                    rect.center = mousePoint;
-                    var path = new paper.Path.Rectangle(rect, 30);
-                    path.fillColor = '#FEE9BC';
-                    break;
-                case 'Process':
-                    console.log(shape);
-                    var rect = new paper.Rectangle([0, 0], [200, 60]);
-                    rect.center = mousePoint;
-                    var path = new paper.Path.Rectangle(rect, 30);
-                    path.fillColor = '#D2C3D4';
-
-                    break;
-                case 'Decision':
-                    console.log(shape);
-                    var rect = new paper.Rectangle([0, 0], [200, 60]);
-                    rect.center = mousePoint;
-                    var path = new paper.Path.Rectangle(rect, 30);
-                    path.fillColor = '#BDE1F0';
-                    break;
-                default:
-                    break;
-            }
-        }
+    lp.removePath = function() {
+        myPath.remove();
+        paper.view.update();
     };
 
-    //lp.clearCanvas = function() {
-    //    if (project._activeLayer.hasChildren()) {
-    //        project.view.remove();
+    // TODO: Add functionality for shapes
+    //lp.drawShape = function(shape) {
+    //    if (!lp.drawing) {
+    //        switch(shape) {
+    //            case 'Start/End':
+    //                console.log(shape);
+    //                var rect = new paper.Rectangle([0, 0], [200, 60]);
+    //                rect.center = mousePoint;
+    //                var path = new paper.Path.Rectangle(rect, 30);
+    //                path.fillColor = '#F7D4C9';
+    //                break;
+    //            case 'Input/Output':
+    //                console.log(shape);
+    //                var rect = new paper.Rectangle([0, 0], [200, 60]);
+    //                rect.center = mousePoint;
+    //                var path = new paper.Path.Rectangle(rect, 30);
+    //                path.fillColor = '#FEE9BC';
+    //                break;
+    //            case 'Process':
+    //                console.log(shape);
+    //                var rect = new paper.Rectangle([0, 0], [200, 60]);
+    //                rect.center = mousePoint;
+    //                var path = new paper.Path.Rectangle(rect, 30);
+    //                path.fillColor = '#D2C3D4';
+    //
+    //                break;
+    //            case 'Decision':
+    //                console.log(shape);
+    //                var rect = new paper.Rectangle([0, 0], [200, 60]);
+    //                rect.center = mousePoint;
+    //                var path = new paper.Path.Rectangle(rect, 30);
+    //                path.fillColor = '#BDE1F0';
+    //                break;
+    //            default:
+    //                break;
+    //        }
     //    }
     //};
 

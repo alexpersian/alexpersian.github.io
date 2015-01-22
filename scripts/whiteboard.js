@@ -18,7 +18,7 @@ var $WBAPP = (function() {
     wb.penColor = 'black';
     wb.bgColor = 'white';
     wb.penStroke = 3;
-    wb.eraseStroke = 50;
+    wb.eraseStroke = 30;
     var prevColor, prevStroke;
 
     wb.shape = 'Start/End';
@@ -39,7 +39,7 @@ var $WBAPP = (function() {
             wb.penColor = prevColor;
             wb.penStroke = prevStroke;
             document.getElementById("erase").innerHTML =
-                "<span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span> Eraser OFF";
+                "Erase <span class=\"glyphicon glyphicon-unchecked\" aria-hidden=\"true\"></span>";
             wb.erasing = false;
         } else {
             prevColor = wb.penColor;
@@ -47,7 +47,7 @@ var $WBAPP = (function() {
             wb.penColor = wb.bgColor;
             wb.penStroke = wb.eraseStroke;
             document.getElementById("erase").innerHTML =
-                "<span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span> Eraser ON";
+                "Erase <span class=\"glyphicon glyphicon-check\" aria-hidden=\"true\"></span>";
             wb.erasing = true;
         }
     };
@@ -94,14 +94,24 @@ var $WBAPP = (function() {
     };
 
     wb.changePenWidth = function(width) {
-        wb.penStroke = width;
-        document.getElementById('penDisplay').innerHTML = "Pen Width: " + width + " <span class=\"caret\"></span>";
+        if (!wb.erasing) {
+            wb.penStroke = width;
+            document.getElementById('penDisplay').innerHTML = "Pen Width: " + width + " <span class=\"caret\"></span>";
+        } else {
+            prevStroke = width;
+            document.getElementById('penDisplay').innerHTML = "Pen Width: " + width + " <span class=\"caret\"></span>";
+        }
     };
 
     wb.changeEraserWidth = function(width) {
-        wb.eraseStroke = width;
-        if (wb.erasing == true) {wb.penStroke = wb.eraseStroke; }
-        document.getElementById('eraseDisplay').innerHTML = "Eraser Width: " + width + " <span class=\"caret\"></span>";
+        if (wb.erasing) {
+            wb.eraseStroke = width;
+            wb.penStroke = wb.eraseStroke;
+            document.getElementById('eraseDisplay').innerHTML = "Eraser Width: " + width + " <span class=\"caret\"></span>";
+        } else {
+            wb.eraseStroke = width;
+            document.getElementById('eraseDisplay').innerHTML = "Eraser Width: " + width + " <span class=\"caret\"></span>";
+        }
     };
 
     // Ensures that drawings aren't unintentionally lost when navigating away from page.
@@ -109,19 +119,9 @@ var $WBAPP = (function() {
         return "Save your drawing before reloading!";
     });
 
-    wb.changeShape = function(shape) {
-        wb.shape = shape;
-        document.getElementById('shapeChoice').innerHTML = shape + " <span class=\"caret\"></span>";
-    };
-
-    $('#createShape').click(function() {
-        $WBPAPER.drawing = false;
-        $WBPAPER.drawShape(wb.shape);
-    });
-
     wb.nightTheme = function() {
         if (!wb.night) {
-            document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>";
+            document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-check\" aria-hidden=\"true\"></span>";
             wb.bgColor = '#01191F';
             switch (wb.penColor) {
                 case 'black':
@@ -139,7 +139,7 @@ var $WBAPP = (function() {
             }
             wb.night = true;
         } else {
-            document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>";
+            document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-unchecked\" aria-hidden=\"true\"></span>";
             wb.bgColor = '#ffffff';
             switch (wb.penColor) {
                 case '#495F66':
@@ -158,7 +158,10 @@ var $WBAPP = (function() {
             wb.night = false;
         }
         $WBPAPER.drawBackground();
-        console.log(wb.bgColor);
+    };
+
+    wb.undo = function() {
+        $WBPAPER.removePath();
     };
 
     wb.clear = function() {
@@ -168,10 +171,19 @@ var $WBAPP = (function() {
             wb.bgColor = '#01191F';
         }
         $WBPAPER.drawBackground();
-        console.log(wb.bgColor);
     };
 
-    // Load a saved whiteboard file onto the canvas.
+    // TODO: Add functionality for shapes
+    //wb.changeShape = function(shape) {
+    //    wb.shape = shape;
+    //    document.getElementById('shapeChoice').innerHTML = shape + " <span class=\"caret\"></span>";
+    //};
+    //
+    //$('#createShape').click(function() {
+    //    $WBPAPER.drawing = false;
+    //    $WBPAPER.drawShape(wb.shape);
+    //});
+
     // TODO: Fix loading functionality
     //document.getElementById('btn-load').addEventListener('change', function(e) {
     //

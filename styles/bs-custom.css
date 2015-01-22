@@ -1,5 +1,6 @@
 .btn-custom-font {
     color: #eee8d5;
+    text-shadow: 1px 1px 1px #686868;
 }
 .btn-custom-font.badge {
     color: #eee8d5;
@@ -130,7 +131,7 @@ fieldset[disabled] .btn-custom.active {
 .navbar-default .navbar-link:hover {
     color: #eee8d5;
 }
-@media (max-width: 1210px) {
+@media (max-width: 1035px) {
     .navbar-header {
         float: none;
     }
