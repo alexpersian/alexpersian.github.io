@@ -2,24 +2,25 @@
  * Created by alexpersian on 11/16/14.
  */
 
-// This file handles the drawing functions for whiteboard.js
-// Paper.js running through Javascript instead of paperscript.
-
+// This file handles the drawingMode functions for whiteboard.js
+// Paper.js running through Javascript instead of Paperscript.
 var $WBPAPER = window.onload = (function() {
-
-    paper.setup($WBAPP.canvas);
 
     var lp = {};
 
-    var myPath, shapePath;
+    paper.setup($WBAPP.canvas);
+
+    var myPath;
     var tool = new paper.Tool();
     var mousePoint = paper.view.center;
-    lp.drawing = true;
+    lp.drawingMode = true;
+    lp.shapeMode = false;
 
-    var hitOptions = {
-        fill: true,
-        item: true
-    };
+    // TODO: Hit detection and movable shapes
+    //var shapePath;
+    //var hitOptions = {
+    //    segments: true
+    //};
 
     // Covers the canvas in a white rectangle to prevent transparent background on save.
     // Drawings are created on top of this rectangle.
@@ -32,13 +33,22 @@ var $WBPAPER = window.onload = (function() {
     lp.drawBackground();
 
     tool.onMouseDown = function(event) {
-        var hitResult = paper.project.hitTest(event.point, hitOptions);
-        if (hitResult) {
-            console.log(hitResult);
-            shapePath = hitResult.item;
+
+        // Create shape if in shapeMode
+        if (lp.shapeMode) {
+            mousePoint = event.point;
+            lp.drawShape(mousePoint, $WBAPP.shape);
         }
 
-        if (lp.drawing) {
+        // TODO: Hit detection and movable shapes
+        //var hitResult = paper.project.hitTest(event.point);
+        //if (hitResult) {
+        //    console.log(hitResult.type);
+        //    shapePath = hitResult.item;
+        //}
+
+        // Draw paths if in drawingMode
+        if (lp.drawingMode) {
             myPath = new paper.Path({
                 strokeColor: $WBAPP.penColor, // $WBAPP is the global module from whiteboard.js
                 strokeWidth: $WBAPP.penStroke,
@@ -46,21 +56,27 @@ var $WBPAPER = window.onload = (function() {
             });
             myPath.add(event.point);
         }
-
     };
 
     tool.onMouseDrag = function(event) {
-        if (shapePath && !lp.drawing) {
-            shapePath.position += event.delta;
-        }
-        if (lp.drawing) {
+
+        // TODO: Movable shapes
+        //if (shapePath && !lp.drawingMode) {
+        //    shapePath.point += event.delta;
+        //}
+
+        if (lp.drawingMode) {
             myPath.add(event.point);
         }
     };
 
-    tool.onMouseUp = function(event) {
-        if (!$WBAPP.erasing && lp.drawing) { myPath.simplify(); }
-        shapePath = null;
+    tool.onMouseUp = function() {
+        if (!$WBAPP.erasing && lp.drawingMode) {
+            myPath.simplify();
+        }
+
+        // TODO: Movable shapes
+        //shapePath = null;
     };
 
     lp.removePath = function() {
@@ -68,52 +84,69 @@ var $WBPAPER = window.onload = (function() {
         paper.view.update();
     };
 
-    // TODO: Add functionality for shapes
-    //lp.drawShape = function(shape) {
-    //    if (!lp.drawing) {
-    //        switch(shape) {
-    //            case 'Start/End':
-    //                console.log(shape);
-    //                var rect = new paper.Rectangle([0, 0], [200, 60]);
-    //                rect.center = mousePoint;
-    //                var path = new paper.Path.Rectangle(rect, 30);
-    //                path.fillColor = '#F7D4C9';
-    //                break;
-    //            case 'Input/Output':
-    //                console.log(shape);
-    //                var rect = new paper.Rectangle([0, 0], [200, 60]);
-    //                rect.center = mousePoint;
-    //                var path = new paper.Path.Rectangle(rect, 30);
-    //                path.fillColor = '#FEE9BC';
-    //                break;
-    //            case 'Process':
-    //                console.log(shape);
-    //                var rect = new paper.Rectangle([0, 0], [200, 60]);
-    //                rect.center = mousePoint;
-    //                var path = new paper.Path.Rectangle(rect, 30);
-    //                path.fillColor = '#D2C3D4';
-    //
-    //                break;
-    //            case 'Decision':
-    //                console.log(shape);
-    //                var rect = new paper.Rectangle([0, 0], [200, 60]);
-    //                rect.center = mousePoint;
-    //                var path = new paper.Path.Rectangle(rect, 30);
-    //                path.fillColor = '#BDE1F0';
-    //                break;
-    //            default:
-    //                break;
-    //        }
-    //    }
-    //};
+    // Creates paths and options for each shape available for the canvas
+    // Shapes are only created if the program is in shape mode
+    lp.drawShape = function(location, shape) {
+        if (lp.shapeMode) {
+            switch(shape) {
+                case 'Terminator':
+                    new paper.Path.Rectangle({
+                        center: location,
+                        size: [200, 60],
+                        fillColor: '#F7D4C9',
+                        strokeColor: $WBAPP.shapeStrokeColor,
+                        strokeWidth: 2,
+                        radius: 30
+                    });
+                    break;
+                case 'Process':
+                    new paper.Path.Rectangle({
+                        center: location,
+                        size: [200, 60],
+                        fillColor: '#FEE9BC',
+                        strokeColor: $WBAPP.shapeStrokeColor,
+                        strokeWidth: 2
+                    });
+                    break;
+                //case 'Decision':
+                //    new paper.Path.Rectangle({
+                //        center: location,
+                //        size: [200, 60],
+                //        fillColor: '#D2C3D4',
+                //        strokeColor: $WBAPP.shapeStrokeColor,
+                //        strokeWidth: 2
+                //    });
+                //    break;
+                //case 'Data':
+                //    new paper.Path.Rectangle({
+                //        center: location,
+                //        size: [200, 60],
+                //        fillColor: '#BDE1F0',
+                //        strokeColor: $WBAPP.shapeStrokeColor,
+                //        strokeWidth: 2
+                //    });
+                //    break;
+                //case 'Database':
+                //    new paper.Path.Rectangle({
+                //        center: location,
+                //        size: [200, 60],
+                //        fillColor: '#B7F8E8',
+                //        strokeColor: $WBAPP.shapeStrokeColor,
+                //        strokeWidth: 2
+                //    });
+                //    break;
+                default:
+                    break;
+            }
+        }
+    };
 
     // TODO: Fix loading functionality
     //lp.loadRaster = function(image) {
     //    console.log("blaaaaaarrrrgg");
-    //    lp.clearCanvas();
     //    var raster = new paper.Raster({
     //        source: image,
-    //        position: view.center
+    //        position: paper.view.center
     //    });
     //};
 

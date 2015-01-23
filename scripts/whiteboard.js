@@ -21,13 +21,19 @@ var $WBAPP = (function() {
     wb.eraseStroke = 30;
     var prevColor, prevStroke;
 
-    wb.shape = 'Start/End';
+    wb.shape = '';
+    wb.shapeStrokeColor = '#95B1BD';
     wb.night = false;
 
     // Prevents default page scrolling action; fixes iOS 8 drawing bug.
     document.addEventListener('touchmove', function(event) {
         event.preventDefault();
     }, false);
+
+    // Ensures that drawings aren't unintentionally lost when navigating away from page.
+    $(window).bind('beforeunload', function() {
+        return "Save your drawing before reloading!";
+    });
 
     // Hacky way to handle the eraser functionality.
     // Draws over the canvas with a white pen stroke.
@@ -114,15 +120,11 @@ var $WBAPP = (function() {
         }
     };
 
-    // Ensures that drawings aren't unintentionally lost when navigating away from page.
-    $(window).bind('beforeunload', function() {
-        return "Save your drawing before reloading!";
-    });
-
     wb.nightTheme = function() {
         if (!wb.night) {
             document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-check\" aria-hidden=\"true\"></span>";
             wb.bgColor = '#01191F';
+            wb.shapeStrokeColor = '#E3F6FF';
             switch (wb.penColor) {
                 case 'black':
                     wb.penColor = '#495F66';
@@ -141,6 +143,7 @@ var $WBAPP = (function() {
         } else {
             document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-unchecked\" aria-hidden=\"true\"></span>";
             wb.bgColor = '#ffffff';
+            wb.shapeStrokeColor = '#95B1BD';
             switch (wb.penColor) {
                 case '#495F66':
                     wb.penColor = 'black';
@@ -174,15 +177,24 @@ var $WBAPP = (function() {
     };
 
     // TODO: Add functionality for shapes
-    //wb.changeShape = function(shape) {
-    //    wb.shape = shape;
-    //    document.getElementById('shapeChoice').innerHTML = shape + " <span class=\"caret\"></span>";
-    //};
-    //
-    //$('#createShape').click(function() {
-    //    $WBPAPER.drawing = false;
-    //    $WBPAPER.drawShape(wb.shape);
-    //});
+    wb.changeShape = function(shape) {
+        wb.shape = shape;
+        document.getElementById('shapeChoice').innerHTML = shape + " <span class=\"caret\"></span>";
+    };
+
+    wb.createShape = function() {
+        if ($WBPAPER.drawingMode) {
+            $WBPAPER.drawingMode = false;
+            $WBPAPER.shapeMode = true;
+            document.getElementById('createShape').className = "glyphicon glyphicon-unchecked";
+            document.getElementById('createShape').className = "glyphicon glyphicon-check";
+        } else {
+            $WBPAPER.drawingMode = true;
+            $WBPAPER.shapeMode = false;
+            document.getElementById('createShape').className = "glyphicon glyphicon-check";
+            document.getElementById('createShape').className = "glyphicon glyphicon-unchecked";
+        }
+    };
 
     // TODO: Fix loading functionality
     //document.getElementById('btn-load').addEventListener('change', function(e) {
@@ -193,7 +205,7 @@ var $WBAPP = (function() {
     //        var imgur = new Image();
     //        imgur.onload = function() {
     //            console.log("blarg");
-    //            $WBPAPER.loadRaster(img);
+    //            $WBPAPER.loadRaster(imgur);
     //        };
     //        imgur.src = event.target.result;
     //    };
