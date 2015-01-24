@@ -73,7 +73,7 @@
                 <button type="button" class="btn btn-custom-font btn-warning" id="erase" onclick="$WBAPP.erase()">
                     Erase <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
                 </button>
-                <button type="button" class="btn btn-custom-font btn-warning" id="udno" onclick="$WBAPP.undo()">
+                <button type="button" class="btn btn-custom-font btn-warning" id="undo" onclick="$WBAPP.undo()">
                     Undo <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
                 </button>
                 <button type="button" class="btn btn-custom-font btn-warning" id="clear" onclick="$WBAPP.clear()">
@@ -81,12 +81,6 @@
                 </button>
             </form>
 
-            <!-- TODO: Implement flow chart shapes -->
-            <form class="nav navbar-form navbar-left">
-                <button type="button" class="btn btn-default" onclick="$WBAPP.createShape()">
-                    Place Shape <span id="createShape" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
-                </button>
-            </form>
             <ul class="nav navbar-nav">
                 <li class="dropdown" id="chooseShape">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
@@ -101,16 +95,23 @@
                     </ul>
                 </li>
             </ul>
+            <!-- TODO: Implement flow chart shapes -->
+            <form class="nav navbar-btn navbar-left">
+                <button type="button" class="btn btn-info btn-custom-font" onclick="$WBAPP.createShape()">
+                    Place <span id="createShape" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+                </button>
+            </form>
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="#" id="btn-save">
-                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
+                       Save <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
                     </a>
                 </li>
-                <!--TODO: Get loading working properly -->
-                <!--<li><a href="#" id="btn-load"><span class="glyphicon glyphicon-open" aria-hidden="true"></span> Load</a></li>-->
-                <!--<li><span class="btn btn-default btn-file">Load <input type="file" id="btn-load"></span></li>-->
+                <li class="btn navbar-btn navbar-right btn-file btn-custom-font">
+                    <input type="file" id="btn-load">
+                    Load <span class="glyphicon glyphicon-open"></span>
+                </li>
             </ul>
         </div>
     </div>
@@ -121,9 +122,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <!-- Internal scripts -->
 <script type="text/javascript" src="../scripts/min/paper-full.min.js"></script>
-<!--<script type="text/javascript" src="../scripts/whiteboard.js"></script>-->
-<!--<script type="text/javascript" src="../scripts/wb-paper.js"></script>-->
-<script type="text/javascript" src="../scripts/min/whiteboard-min.js"></script>
-<script type="text/javascript" src="../scripts/min/wb-paper-min.js"></script>
+<script type="text/javascript" src="../scripts/whiteboard.js"></script>
+<script type="text/javascript" src="../scripts/wb-paper.js"></script>
+<!--<script type="text/javascript" src="../scripts/min/whiteboard-min.js"></script>-->
+<!--<script type="text/javascript" src="../scripts/min/wb-paper-min.js"></script>-->
 </body>
 </html>

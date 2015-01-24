@@ -24,6 +24,7 @@ var $WBAPP = (function() {
     wb.shape = '';
     wb.shapeStrokeColor = '#95B1BD';
     wb.night = false;
+    wb.erasing = false;
 
     // Prevents default page scrolling action; fixes iOS 8 drawing bug.
     document.addEventListener('touchmove', function(event) {
@@ -39,7 +40,6 @@ var $WBAPP = (function() {
     // Draws over the canvas with a white pen stroke.
     // Changes the text in the eraser button to reflect the mode.
     // Saves the current pen color+width so it can be used after erasing is finished.
-    wb.erasing = false;
     wb.erase = function () {
         if (wb.erasing !== false) {
             wb.penColor = prevColor;
@@ -69,13 +69,6 @@ var $WBAPP = (function() {
         var sec = d.getSeconds();
         return (year + "-" + month + "-" + day + "_" + hour + ":" + min + ":" + sec);
     };
-
-    // Save button grabs canvas and saves it as .png with timestamp as file name.
-    var saveButton = document.getElementById('btn-save');
-    saveButton.addEventListener('click', function(e) {
-        saveButton.download = wb.getDate();
-        saveButton.href = wb.canvas.toDataURL('image/svg');
-    });
 
     wb.changeColor = function (color) {
         if (wb.erasing === true) { wb.erase(); }
@@ -196,22 +189,24 @@ var $WBAPP = (function() {
         }
     };
 
+    // Save button grabs canvas and saves it as .png with timestamp as file name.
+    $('#btn-save').on('click', function(e) {
+        this.download = wb.getDate();
+        this.href = wb.canvas.toDataURL('image/svg');
+    });
+
     // TODO: Fix loading functionality
-    //document.getElementById('btn-load').addEventListener('change', function(e) {
-    //
-    //    var reader = new FileReader();
-    //    reader.onload = function(event) {
-    //        console.log("omg freak out");
-    //        var imgur = new Image();
-    //        imgur.onload = function() {
-    //            console.log("blarg");
-    //            $WBPAPER.loadRaster(imgur);
-    //        };
-    //        imgur.src = event.target.result;
-    //    };
-    //    reader.readAsDataURL(this.files[0]);
-    //
-    //}, false);
+    $('#btn-load').on('change', function(e) {
+        var file = e.target.files[0];
+        var fileReader = new FileReader();
+
+        fileReader.onload = function(e2) {
+            wb.clear();
+            $WBPAPER.loadRaster(e2.target.result);
+        };
+
+        fileReader.readAsDataURL(file);
+    });
 
     return wb;
 }($WBAPP = $WBAPP || {}));

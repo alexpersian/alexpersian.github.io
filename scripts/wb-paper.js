@@ -80,8 +80,10 @@ var $WBPAPER = window.onload = (function() {
     };
 
     lp.removePath = function() {
-        myPath.remove();
-        paper.view.update();
+        if (myPath) {
+            myPath.remove();
+            paper.view.update();
+        }
     };
 
     // Creates paths and options for each shape available for the canvas
@@ -142,13 +144,12 @@ var $WBPAPER = window.onload = (function() {
     };
 
     // TODO: Fix loading functionality
-    //lp.loadRaster = function(image) {
-    //    console.log("blaaaaaarrrrgg");
-    //    var raster = new paper.Raster({
-    //        source: image,
-    //        position: paper.view.center
-    //    });
-    //};
+    lp.loadRaster = function(image) {
+        new paper.Raster({
+            source: image,
+            position: paper.view.center
+        });
+    };
 
     return lp;
 })();
