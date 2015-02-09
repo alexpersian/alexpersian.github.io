@@ -114,46 +114,49 @@ var $WBAPP = (function() {
     };
 
     wb.nightTheme = function() {
-        if (!wb.night) {
-            document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-check\" aria-hidden=\"true\"></span>";
-            wb.bgColor = '#01191F';
-            wb.shapeStrokeColor = '#E3F6FF';
-            switch (wb.penColor) {
-                case 'black':
-                    wb.penColor = '#495F66';
-                    break;
-                case 'red':
-                    wb.penColor = '#dc322f';
-                    break;
-                case 'blue':
-                    wb.penColor = '#268bd2';
-                    break;
-                case 'green':
-                    wb.penColor = '#859900';
-                    break;
+        c = confirm('This will clear the canvas. Are you sure?');
+        if (c) {
+            if (!wb.night) {
+                document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-check\" aria-hidden=\"true\"></span>";
+                wb.bgColor = '#01191F';
+                wb.shapeStrokeColor = '#E3F6FF';
+                switch (wb.penColor) {
+                    case 'black':
+                        wb.penColor = '#495F66';
+                        break;
+                    case 'red':
+                        wb.penColor = '#dc322f';
+                        break;
+                    case 'blue':
+                        wb.penColor = '#268bd2';
+                        break;
+                    case 'green':
+                        wb.penColor = '#859900';
+                        break;
+                }
+                wb.night = true;
+            } else {
+                document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-unchecked\" aria-hidden=\"true\"></span>";
+                wb.bgColor = '#ffffff';
+                wb.shapeStrokeColor = '#95B1BD';
+                switch (wb.penColor) {
+                    case '#495F66':
+                        wb.penColor = 'black';
+                        break;
+                    case '#dc322f':
+                        wb.penColor = 'red';
+                        break;
+                    case '#268bd2':
+                        wb.penColor = 'blue';
+                        break;
+                    case '#859900':
+                        wb.penColor = 'green';
+                        break;
+                }
+                wb.night = false;
             }
-            wb.night = true;
-        } else {
-            document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-unchecked\" aria-hidden=\"true\"></span>";
-            wb.bgColor = '#ffffff';
-            wb.shapeStrokeColor = '#95B1BD';
-            switch (wb.penColor) {
-                case '#495F66':
-                    wb.penColor = 'black';
-                    break;
-                case '#dc322f':
-                    wb.penColor = 'red';
-                    break;
-                case '#268bd2':
-                    wb.penColor = 'blue';
-                    break;
-                case '#859900':
-                    wb.penColor = 'green';
-                    break;
-            }
-            wb.night = false;
+            $WBPAPER.drawBackground();
         }
-        $WBPAPER.drawBackground();
     };
 
     wb.undo = function() {
@@ -161,12 +164,15 @@ var $WBAPP = (function() {
     };
 
     wb.clear = function() {
-        if (!wb.night) {
-            wb.bgColor = '#ffffff';
-        } else {
-            wb.bgColor = '#01191F';
+        c = confirm('Are you sure you want to clear the canvas?');
+        if (c) {
+            if (!wb.night) {
+                wb.bgColor = '#ffffff';
+            } else {
+                wb.bgColor = '#01191F';
+            }
+            $WBPAPER.drawBackground();
         }
-        $WBPAPER.drawBackground();
     };
 
     // TODO: Add functionality for shapes
