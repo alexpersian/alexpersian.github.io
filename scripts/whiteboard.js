@@ -26,20 +26,33 @@ var $WBAPP = (function() {
     wb.night = false;
     wb.erasing = false;
 
-    // Prevents default page scrolling action; fixes iOS 8 drawing bug.
+    // Night theme colors
+    wb.nightBg     = '#272E36';
+    wb.nightBlack  = '#969CAC';
+    wb.nightRed    = '#AD4D57';
+    wb.nightBlue   = '#2990FF';
+    wb.nightGreen  = '#95B374';
+
+    /**
+     * Prevents default page scrolling action; fixes iOS 8 drawing bug.
+     */
     document.addEventListener('touchmove', function(event) {
         event.preventDefault();
     }, false);
 
-    // Ensures that drawings aren't unintentionally lost when navigating away from page.
+    /**
+     * Ensures that drawings aren't unintentionally lost when navigating away from page.
+     */
     $(window).bind('beforeunload', function() {
-        return "Save your drawing before reloading!";
+        return "Save your drawing before leaving!!";
     });
 
-    // Hacky way to handle the eraser functionality.
-    // Draws over the canvas with a white pen stroke.
-    // Changes the text in the eraser button to reflect the mode.
-    // Saves the current pen color+width so it can be used after erasing is finished.
+    /**
+     * Hacky way to handle the eraser functionality.
+     * Draws over the canvas with a white pen stroke.
+     * Changes the text in the eraser button to reflect the mode.
+     * Saves the current pen color+width so it can be used after erasing is finished.
+     */
     wb.erase = function () {
         if (wb.erasing !== false) {
             wb.penColor = prevColor;
@@ -58,7 +71,9 @@ var $WBAPP = (function() {
         }
     };
 
-    // Returns a date string used to timestamp save files.
+    /**
+     * Returns a date string used to timestamp save files.
+     */
     wb.getDate = function () {
         var d = new Date();
         var year = d.getFullYear();
@@ -70,21 +85,26 @@ var $WBAPP = (function() {
         return (year + "-" + month + "-" + day + "_" + hour + ":" + min + ":" + sec);
     };
 
+
+    /**
+     * Change color will grab the value from the color buttons and change the draw color to that.
+     * If in night mode, it will change to the more pleasing colors.
+     */
     wb.changeColor = function (color) {
         if (wb.erasing === true) { wb.erase(); }
         if (wb.night) {
             switch (color) {
                 case 'black':
-                    wb.penColor = '#495F66';
+                    wb.penColor = wb.nightBlack;
                     break;
                 case 'red':
-                    wb.penColor = '#dc322f';
+                    wb.penColor = wb.nightRed;
                     break;
                 case 'blue':
-                    wb.penColor = '#268bd2';
+                    wb.penColor = wb.nightBlue;
                     break;
                 case 'green':
-                    wb.penColor = '#859900';
+                    wb.penColor = wb.nightGreen;
                     break;
             }
         } else {
@@ -92,6 +112,9 @@ var $WBAPP = (function() {
         }
     };
 
+    /**
+     * These two functions simple change the stroke width based on passed integer parameter.
+     */
     wb.changePenWidth = function(width) {
         if (!wb.erasing) {
             wb.penStroke = width;
@@ -101,7 +124,6 @@ var $WBAPP = (function() {
             document.getElementById('penDisplay').innerHTML = "Pen Width: " + width + " <span class=\"caret\"></span>";
         }
     };
-
     wb.changeEraserWidth = function(width) {
         if (wb.erasing) {
             wb.eraseStroke = width;
@@ -113,68 +135,111 @@ var $WBAPP = (function() {
         }
     };
 
+    /**
+     * Night theme changes a few things for aesthetics when going to a darker color.
+     * Background is changed by creating a new Rectangle onto the canvas.
+     * This new background has the night color.
+     * Pen colors are also modified to be more pleasing on the dark background.
+     */
     wb.nightTheme = function() {
-        if (!wb.night) {
-            document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-check\" aria-hidden=\"true\"></span>";
-            wb.bgColor = '#01191F';
-            wb.shapeStrokeColor = '#E3F6FF';
-            switch (wb.penColor) {
-                case 'black':
-                    wb.penColor = '#495F66';
-                    break;
-                case 'red':
-                    wb.penColor = '#dc322f';
-                    break;
-                case 'blue':
-                    wb.penColor = '#268bd2';
-                    break;
-                case 'green':
-                    wb.penColor = '#859900';
-                    break;
+        c = confirm('This will clear the canvas. Are you sure?');
+        if (c) {
+            if (!wb.night) {
+                document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-check\" aria-hidden=\"true\"></span>";
+<<<<<<< HEAD
+                wb.bgColor = wb.nightBg;
+                wb.shapeStrokeColor = '#E3F6FF';
+                switch (wb.penColor) {
+                    case 'black':
+                        wb.penColor = wb.nightBlack;
+                        break;
+                    case 'red':
+                        wb.penColor = wb.nightRed;
+                        break;
+                    case 'blue':
+                        wb.penColor = wb.nightBlue;
+                        break;
+                    case 'green':
+                        wb.penColor = wb.nightGreen;
+=======
+                wb.bgColor = '#01191F';
+                wb.shapeStrokeColor = '#E3F6FF';
+                switch (wb.penColor) {
+                    case 'black':
+                        wb.penColor = '#495F66';
+                        break;
+                    case 'red':
+                        wb.penColor = '#dc322f';
+                        break;
+                    case 'blue':
+                        wb.penColor = '#268bd2';
+                        break;
+                    case 'green':
+                        wb.penColor = '#859900';
+>>>>>>> FETCH_HEAD
+                        break;
+                }
+                wb.night = true;
+            } else {
+                document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-unchecked\" aria-hidden=\"true\"></span>";
+                wb.bgColor = '#ffffff';
+                wb.shapeStrokeColor = '#95B1BD';
+                switch (wb.penColor) {
+                    case '#495F66':
+                        wb.penColor = 'black';
+                        break;
+                    case '#dc322f':
+                        wb.penColor = 'red';
+                        break;
+                    case '#268bd2':
+                        wb.penColor = 'blue';
+                        break;
+                    case '#859900':
+                        wb.penColor = 'green';
+                        break;
+                }
+                wb.night = false;
             }
-            wb.night = true;
-        } else {
-            document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-unchecked\" aria-hidden=\"true\"></span>";
-            wb.bgColor = '#ffffff';
-            wb.shapeStrokeColor = '#95B1BD';
-            switch (wb.penColor) {
-                case '#495F66':
-                    wb.penColor = 'black';
-                    break;
-                case '#dc322f':
-                    wb.penColor = 'red';
-                    break;
-                case '#268bd2':
-                    wb.penColor = 'blue';
-                    break;
-                case '#859900':
-                    wb.penColor = 'green';
-                    break;
-            }
-            wb.night = false;
+            $WBPAPER.drawBackground();
         }
-        $WBPAPER.drawBackground();
     };
 
+    /**
+     * Undo simply removes the most recently created path.
+     */
     wb.undo = function() {
         $WBPAPER.removePath();
     };
 
+    /**
+     * Clears the canvas by drawing the background over the current canvas.
+     * Considers the current theme when redrawing.
+     */
     wb.clear = function() {
-        if (!wb.night) {
-            wb.bgColor = '#ffffff';
-        } else {
-            wb.bgColor = '#01191F';
+        c = confirm('Are you sure you want to clear the canvas?');
+        if (c) {
+            if (!wb.night) {
+                wb.bgColor = '#ffffff';
+            } else {
+<<<<<<< HEAD
+                wb.bgColor = wb.nightBg;
+=======
+                wb.bgColor = '#01191F';
+>>>>>>> FETCH_HEAD
+            }
+            $WBPAPER.drawBackground();
         }
-        $WBPAPER.drawBackground();
     };
 
-    // TODO: Add functionality for shapes
+    /**
+     * Change shape monitors the value of the shape dropdown.
+     * Draws shapes on the canvas by using Rectangle paths.
+     * Shapes are created at mouse click point.
+     */
     wb.changeShape = function(shape) {
         wb.shape = shape;
         document.getElementById('shapeChoice').innerHTML = shape + " <span class=\"caret\"></span>";
     };
-
     wb.createShape = function() {
         if ($WBPAPER.drawingMode) {
             $WBPAPER.drawingMode = false;
@@ -189,13 +254,17 @@ var $WBAPP = (function() {
         }
     };
 
-    // Save button grabs canvas and saves it as .png with timestamp as file name.
-    $('#btn-save').on('click', function(e) {
+    /**
+     * Save button grabs canvas and saves it as .png with timestamp as file name.
+     */
+    $('#btn-save').on('click', function() {
         this.download = wb.getDate();
         this.href = wb.canvas.toDataURL('image/svg');
     });
 
-    // TODO: Fix loading functionality
+    /**
+     * Loads a saved board from an image file. Overwrites current canvas.
+     */
     $('#btn-load').on('change', function(e) {
         var file = e.target.files[0];
         var fileReader = new FileReader();

@@ -110,40 +110,13 @@ var $WBPAPER = window.onload = (function() {
                         strokeWidth: 2
                     });
                     break;
-                //case 'Decision':
-                //    new paper.Path.Rectangle({
-                //        center: location,
-                //        size: [200, 60],
-                //        fillColor: '#D2C3D4',
-                //        strokeColor: $WBAPP.shapeStrokeColor,
-                //        strokeWidth: 2
-                //    });
-                //    break;
-                //case 'Data':
-                //    new paper.Path.Rectangle({
-                //        center: location,
-                //        size: [200, 60],
-                //        fillColor: '#BDE1F0',
-                //        strokeColor: $WBAPP.shapeStrokeColor,
-                //        strokeWidth: 2
-                //    });
-                //    break;
-                //case 'Database':
-                //    new paper.Path.Rectangle({
-                //        center: location,
-                //        size: [200, 60],
-                //        fillColor: '#B7F8E8',
-                //        strokeColor: $WBAPP.shapeStrokeColor,
-                //        strokeWidth: 2
-                //    });
-                //    break;
                 default:
                     break;
             }
         }
     };
 
-    // TODO: Fix loading functionality
+    // Loads the chosen image as a raster and places it in the center of the canvas.
     lp.loadRaster = function(image) {
         new paper.Raster({
             source: image,

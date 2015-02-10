@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "18270",
+"creatorBuild": "18493",
 "files": {
 	"\/favicon.png": {
 		"fileType": 32768,
@@ -31,29 +31,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/html\/spotify-app.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/html\/spotify-app.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/html\/terrain.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/html\/terrain.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/html\/whiteboard.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/html\/whiteboard.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -65,6 +47,17 @@
 		"initialSize": 130,
 		"inputAbbreviatedPath": "\/images\/hr.png",
 		"outputAbbreviatedPath": "\/images\/hr.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/paper-bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 108043,
+		"inputAbbreviatedPath": "\/images\/paper-bg.png",
+		"outputAbbreviatedPath": "\/images\/paper-bg.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -342,17 +335,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/scripts\/handlebars-v2.0.0.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scripts\/handlebars-v2.0.0.js",
-		"outputAbbreviatedPath": "\/scripts\/min\/handlebars-v2.0.0-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/scripts\/min\/dev-main-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -364,34 +346,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/scripts\/mustache.js": {
+	"\/scripts\/min\/paper-full.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scripts\/mustache.js",
-		"outputAbbreviatedPath": "\/scripts\/min\/mustache-min.js",
+		"inputAbbreviatedPath": "\/scripts\/min\/paper-full.min.js",
+		"outputAbbreviatedPath": "\/scripts\/min\/min\/paper-full.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/scripts\/orbit-controls.js": {
+	"\/scripts\/min\/wb-paper-min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scripts\/orbit-controls.js",
-		"outputAbbreviatedPath": "\/scripts\/min\/orbit-controls-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/scripts\/paper-full.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scripts\/paper-full.min.js",
-		"outputAbbreviatedPath": "\/scripts\/min\/paper-full.min-min.js",
+		"inputAbbreviatedPath": "\/scripts\/min\/wb-paper-min.js",
+		"outputAbbreviatedPath": "\/scripts\/min\/min\/wb-paper-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -408,17 +379,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/scripts\/spotify-app.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scripts\/spotify-app.js",
-		"outputAbbreviatedPath": "\/scripts\/min\/spotify-app-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/scripts\/terrain.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -430,23 +390,34 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/scripts\/wb-paper.js": {
+	"\/scripts\/vendor\/handlebars-v2.0.0.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scripts\/wb-paper.js",
-		"outputAbbreviatedPath": "\/scripts\/min\/wb-paper-min.js",
+		"inputAbbreviatedPath": "\/scripts\/vendor\/handlebars-v2.0.0.js",
+		"outputAbbreviatedPath": "\/scripts\/vendor\/min\/handlebars-v2.0.0-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/scripts\/whiteboard.js": {
+	"\/scripts\/vendor\/mustache.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scripts\/whiteboard.js",
-		"outputAbbreviatedPath": "\/scripts\/min\/whiteboard-min.js",
+		"inputAbbreviatedPath": "\/scripts\/vendor\/mustache.js",
+		"outputAbbreviatedPath": "\/scripts\/vendor\/min\/mustache-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/scripts\/vendor\/orbit-controls.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/vendor\/orbit-controls.js",
+		"outputAbbreviatedPath": "\/scripts\/vendor\/min\/orbit-controls-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -598,15 +569,6 @@
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
-		},
-	"\/styles\/spotify-style.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/styles\/spotify-style.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
@@ -657,6 +619,10 @@
 			},
 		"empty_constructor_needs_parens": {
 			"active": 0,
+			"flagValue": -1
+			},
+		"ensure_comprehensions": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"indentation": {
@@ -750,6 +716,10 @@
 		"space_operators": {
 			"active": 0,
 			"flagValue": -1
+			},
+		"spacing_after_comma": {
+			"active": 1,
+			"flagValue": -1
 			}
 		},
 	"coffeeMinifyOutput": 1,
@@ -806,6 +776,10 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"browserify": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"camelcase": {
 			"active": 0,
 			"flagValue": -1
@@ -828,6 +802,10 @@
 			},
 		"dojo": {
 			"active": 0,
+			"flagValue": -1
+			},
+		"elision": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"eqeqeq": {
@@ -882,6 +860,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"jasmine": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"jquery": {
 			"active": 1,
 			"flagValue": -1
@@ -925,6 +907,10 @@
 		"maxstatements": {
 			"active": 0,
 			"flagValue": 4
+			},
+		"mocha": {
+			"active": 0,
+			"flagValue": -1
 			},
 		"mootools": {
 			"active": 0,
@@ -991,6 +977,10 @@
 			"flagValue": -1
 			},
 		"prototypejs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"qunit": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -1218,6 +1208,7 @@
 	"slimAutoOutputPathStyle": 0,
 	"slimCompileOnly": 0,
 	"slimLogicless": 0,
+	"slimOutputFormat": 0,
 	"slimOutputStyle": 1,
 	"slimRailsCompatible": 0,
 	"stylusAutoOutputPathEnabled": 1,
@@ -1242,8 +1233,9 @@
 	"typescriptMinifyOutput": 0,
 	"typescriptModuleType": 0,
 	"typescriptNoImplicitAny": 0,
-	"typescriptNoResolve": 0,
+	"typescriptPreserveConstEnums": 0,
 	"typescriptRemoveComments": 0,
+	"typescriptSuppressImplicitAnyIndexErrors": 0,
 	"typescriptTargetECMAVersion": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
@@ -1280,6 +1272,10 @@
 			"flagValue": -1
 			},
 		"dead_code": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"drop_console": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -1323,6 +1319,10 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"keep_fargs": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -1335,8 +1335,16 @@
 			"active": 1,
 			"flagValue": 32000
 			},
+		"negate_iife": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"properties": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"pure_getters": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"quote-keys": {

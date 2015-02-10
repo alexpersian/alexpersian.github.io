@@ -2,7 +2,7 @@
  * Created by alexpersian on 12/31/14.
  */
 
-$(function() {
+$(document).ready(function() {
     console.log('ready');
 
     // Handlebars templates for DOM manipulation
@@ -19,6 +19,9 @@ $(function() {
     // Event listeners for buttons
     $('#search').click(function getInfo() {
         $('#current-artist').html('<img src="../images/ajax-loader.gif">');
+
+        $("#albums, #artists").css('display', 'block');
+
         var query = $("#query").val();
         $('#query').val('');
         console.log(query);

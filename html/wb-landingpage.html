@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Whiteboard Landing Page</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Development -->
+    <link href="../styles/material.css" rel="stylesheet">
+    <link href="../styles/ripples.css" rel="stylesheet">
+    <!--<link href="../styles/min/material-wfont.min.css" rel="stylesheet">-->
+
+    <!-- Deployment -->
+    <!--<link href="../styles/min/ripples.min.css" rel="stylesheet">-->
+    <!--<link href="../styles/min/material-wfont.min.css" rel="stylesheet">-->
+</head>
+
+<body>
+
+<!-- Your site -->
+
+<h3 class="jumbotron" style="text-align: center">
+    SCSU Web-Board
+</h3>
+
+<div class="container">
+
+    <ul>
+        <li>On the following page you will be able to draw and create presentations just like you would on a a normal whiteboard. </li>
+        <li>There are drawing tools, shape tools, and image tools. Along with saving and uploading functionality. </li>
+        <li>Choosing the <b>Default</b> account will get you up and running the fastest, but you won't be able to save boards unless you are signed into your <b>Personal</b> account. </li>
+        <li>Enjoy!</li>
+    </ul>
+
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Enter credentials or choose Default</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <a href="#" id="personal" class="btn btn-success col-xs-12">Personal Login</a>
+        <a href="whiteboard.html" class="btn btn-info col-xs-12">Default Login</a>
+    </form>
+
+</div> <!-- /container -->
+
+<!-- Your site ends -->
+
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script src="../scripts/min/ripples.min.js"></script>
+<script src="../scripts/min/material.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $.material.init();
+
+        $('#personal').on('click', function() {
+            console.log($('#inputEmail').val());
+            console.log($('#inputPassword').val());
+        });
+    });
+</script>
+
+</body>
+
+</html>
