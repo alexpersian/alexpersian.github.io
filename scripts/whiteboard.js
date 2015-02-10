@@ -146,7 +146,6 @@ var $WBAPP = (function() {
         if (c) {
             if (!wb.night) {
                 document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-check\" aria-hidden=\"true\"></span>";
-<<<<<<< HEAD
                 wb.bgColor = wb.nightBg;
                 wb.shapeStrokeColor = '#E3F6FF';
                 switch (wb.penColor) {
@@ -161,22 +160,6 @@ var $WBAPP = (function() {
                         break;
                     case 'green':
                         wb.penColor = wb.nightGreen;
-=======
-                wb.bgColor = '#01191F';
-                wb.shapeStrokeColor = '#E3F6FF';
-                switch (wb.penColor) {
-                    case 'black':
-                        wb.penColor = '#495F66';
-                        break;
-                    case 'red':
-                        wb.penColor = '#dc322f';
-                        break;
-                    case 'blue':
-                        wb.penColor = '#268bd2';
-                        break;
-                    case 'green':
-                        wb.penColor = '#859900';
->>>>>>> FETCH_HEAD
                         break;
                 }
                 wb.night = true;
@@ -221,11 +204,7 @@ var $WBAPP = (function() {
             if (!wb.night) {
                 wb.bgColor = '#ffffff';
             } else {
-<<<<<<< HEAD
                 wb.bgColor = wb.nightBg;
-=======
-                wb.bgColor = '#01191F';
->>>>>>> FETCH_HEAD
             }
             $WBPAPER.drawBackground();
         }

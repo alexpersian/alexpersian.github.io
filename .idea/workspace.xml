@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06816522-7bfb-4b53-bf01-dcddd117f5a9" name="Default" comment="Banana phone added to repo">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.codekit" afterPath="$PROJECT_DIR$/config.codekit" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/spotify-app.html" afterPath="$PROJECT_DIR$/html/spotify-app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/spotify-app.js" afterPath="$PROJECT_DIR$/scripts/spotify-app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/spotify-style.css" afterPath="$PROJECT_DIR$/styles/spotify-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/wb-paper.js" afterPath="$PROJECT_DIR$/scripts/wb-paper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/min/whiteboard-min.js" afterPath="$PROJECT_DIR$/scripts/min/whiteboard-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/whiteboard.html" afterPath="$PROJECT_DIR$/html/whiteboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/whiteboard.js" afterPath="$PROJECT_DIR$/scripts/whiteboard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -61,8 +54,8 @@
       <file leaf-file-name="whiteboard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/whiteboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48324743" vertical-offset="150" max-vertical-offset="4305">
-              <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+            <state vertical-scroll-proportion="2.8414948" vertical-offset="0" max-vertical-offset="3990">
+              <caret line="147" column="146" selection-start-line="147" selection-start-column="146" selection-end-line="147" selection-end-column="146" />
               <folding />
             </state>
           </provider>
@@ -824,8 +817,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/whiteboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48324743" vertical-offset="150" max-vertical-offset="4305">
-          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        <state vertical-scroll-proportion="2.8414948" vertical-offset="0" max-vertical-offset="3990">
+          <caret line="147" column="146" selection-start-line="147" selection-start-column="146" selection-end-line="147" selection-end-column="146" />
           <folding />
         </state>
       </provider>
