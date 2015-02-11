@@ -27,11 +27,11 @@ var $WBAPP = (function() {
     wb.erasing = false;
 
     // Night theme colors
-    wb.nightBg     = '#272E36';
-    wb.nightBlack  = '#969CAC';
-    wb.nightRed    = '#AD4D57';
-    wb.nightBlue   = '#2990FF';
-    wb.nightGreen  = '#95B374';
+    wb.nightBg     = '#002b36';
+    wb.nightBlack  = '#657b83';
+    wb.nightRed    = '#dc322f';
+    wb.nightBlue   = '#268bd2';
+    wb.nightGreen  = '#349900';
 
     /**
      * Prevents default page scrolling action; fixes iOS 8 drawing bug.
@@ -54,7 +54,7 @@ var $WBAPP = (function() {
      * Saves the current pen color+width so it can be used after erasing is finished.
      */
     wb.erase = function () {
-        if (wb.erasing !== false) {
+        if (wb.erasing) {
             wb.penColor = prevColor;
             wb.penStroke = prevStroke;
             document.getElementById("erase").innerHTML =
@@ -91,7 +91,7 @@ var $WBAPP = (function() {
      * If in night mode, it will change to the more pleasing colors.
      */
     wb.changeColor = function (color) {
-        if (wb.erasing === true) { wb.erase(); }
+        if (wb.erasing) { wb.erase(); }
         if (wb.night) {
             switch (color) {
                 case 'black':

@@ -54,7 +54,7 @@ var $WBPAPER = window.onload = (function() {
                 strokeWidth: $WBAPP.penStroke,
                 strokeCap: 'round'
             });
-            myPath.add(event.point);
+            //myPath.add(event.point);
         }
     };
 
