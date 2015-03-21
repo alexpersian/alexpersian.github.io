@@ -1,7 +1,6 @@
 /*
  * Created by alexpersian on 12/31/14.
  */
-
 $(document).ready(function() {
     console.log('ready');
 
