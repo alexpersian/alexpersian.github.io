@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bubble Sort</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="../scripts/bubbly.js"></script>
+</head>
+<body style="padding-top: 80px">
+<div class="jumbotron col-md-4 col-md-offset-4">
+    <h1>Bubble Sort!</h1>
+    <br>
+    <form>
+        <div class="form-group">
+            <label for="input">Input numbers, separated by commas...</label>
+            <input id="input" type="text" name="numbers" placeholder="Numbers" class="form-control">
+        </div>
+        <div>
+            <button class="btn btn-primary" type="button" onclick="$BUBBLE.getNumbers()">Submit</button>
+        </div>
+    </form>
+    <hr>
+    <h3>Result:</h3>
+    <p id="display"></p>
+</div>
+</body>
+</html>
