@@ -8,22 +8,37 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="../scripts/bubbly.js"></script>
 </head>
-<body style="padding-top: 80px">
-<div class="jumbotron col-md-4 col-md-offset-4">
+<body style="padding-top: 20px">
+<div class="col-sm-4 col-sm-offset-4">
     <h1>Bubble Sort!</h1>
-    <br>
     <form>
         <div class="form-group">
-            <label for="input">Input numbers, separated by commas...</label>
-            <input id="input" type="text" name="numbers" placeholder="Numbers" class="form-control">
+            <label for="num">Amount of Numbers</label>
+            <input id="num" type="text" name="numbers" value="10" class="form-control">
+            <label for="min">Lowest...</label>
+            <input id="min" type="text" name="numbers" value="0" class="form-control">
+            <label for="max">Highest...</label>
+            <input id="max" type="text" name="numbers" value="9" class="form-control">
         </div>
         <div>
-            <button class="btn btn-primary" type="button" onclick="$BUBBLE.getNumbers()">Submit</button>
+            <button id="generate" class="btn btn-primary" type="button">Generate</button>
+            <button id="stupidSort" class="btn btn-danger" type="button">Stupid Sort</button>
+            <button id="smartSort" class="btn btn-success" type="button">Smart Sort</button>
+        </div>
+        <hr>
+        <div class="form-group">
+            <h3>Results:</h3>
+            <p id="elements">Elements in Array: </p>
+            <p id="compare">Comparisons Made: </p>
+            <p id="access">Array Accesses: </p>
+            <p id="time">Time Taken: </p>
+        </div>
+        <hr>
+        <div class="form-group">
+            <label id="r-label" for="results">Numbers (unsorted)</label>
+            <p id="results">blah</p>
         </div>
     </form>
-    <hr>
-    <h3>Result:</h3>
-    <p id="display"></p>
 </div>
 </body>
 </html>
