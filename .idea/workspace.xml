@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06816522-7bfb-4b53-bf01-dcddd117f5a9" name="Default" comment="Banana phone added to repo">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/alexpersian.github.io.iml" afterPath="$PROJECT_DIR$/.idea/alexpersian.github.io.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/alexpersian_github_io_node_modules.xml" afterPath="$PROJECT_DIR$/.idea/libraries/alexpersian_github_io_node_modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/bubbles.html" afterPath="$PROJECT_DIR$/html/bubbles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/bubbly.js" afterPath="$PROJECT_DIR$/scripts/bubbly.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alexpersian.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +29,8 @@
       <file leaf-file-name="bubbles.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/bubbles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43994415" vertical-offset="0" max-vertical-offset="735">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.54469275" vertical-offset="0" max-vertical-offset="750">
+              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -822,8 +817,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/bubbles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43994415" vertical-offset="0" max-vertical-offset="735">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.54469275" vertical-offset="0" max-vertical-offset="750">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
