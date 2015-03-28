@@ -7,7 +7,7 @@ var $WBAPP = (function() {
 
     var wb = {};
 
-    wb.canvas = document.getElementById("myCanvas");
+    wb.canvas = document.getElementById("my-canvas");
 
     wb.width = window.innerWidth;
     wb.height = window.innerHeight * 0.95;
@@ -254,6 +254,31 @@ var $WBAPP = (function() {
         };
 
         fileReader.readAsDataURL(file);
+    });
+
+    /**
+     * Editor and modal junk
+     */
+    var editor = ace.edit("editor");
+    var mousePos;
+    $('#show-editor').on('click', function() {
+        $('#my-canvas').on('mousedown', function() {
+            mousePos = {
+                x: event.pageX,
+                y: event.pageY
+            };
+            $('#my-modal').modal('show');
+            editor.setTheme("ace/theme/github");
+            editor.getSession().setMode("ace/mode/text");
+        });
+        $(this).text("Now Click");
+    });
+    $('#save-text').on('click', function() {
+        console.log(editor.getValue());
+        $WBPAPER.drawText(editor.getValue(), mousePos.x, mousePos.y);
+        $('#my-modal').modal('hide');
+        $('#my-canvas').off('mousedown');
+        $('#show-editor').text("Input Text");
     });
 
     return wb;

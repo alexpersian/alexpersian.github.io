@@ -7,5 +7,7 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="html5" level="application" />
+    <orderEntry type="library" name="ace" level="application" />
+    <orderEntry type="library" name="paper-full" level="application" />
   </component>
 </module>

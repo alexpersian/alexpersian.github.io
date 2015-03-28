@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Whiteboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/bs-custom.css">
+    <link rel="stylesheet" href="../styles/whiteboard-style.css">
 </head>
 <body style="overflow: hidden;">
 <!-- NavBar -->
@@ -80,7 +80,6 @@
                     Clear <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
                 </button>
             </form>
-
             <ul class="nav navbar-nav">
                 <li class="dropdown" id="chooseShape">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
@@ -96,6 +95,7 @@
                 <button type="button" class="btn btn-info btn-custom-font" onclick="$WBAPP.createShape()">
                     Place <span id="createShape" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
                 </button>
+                <button type="button" class="btn btn-custom-font btn-success" id="show-editor">Input Text</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -111,13 +111,31 @@
         </div>
     </div>
 </nav>
-<canvas id="myCanvas"></canvas>
+<canvas id="my-canvas"></canvas>
+<div id="my-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Text Input</h4>
+            </div>
+            <div class="modal-body">
+                <div id="editor"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="save-text">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- External scripts -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.8/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.22/paper-full.min.js"></script>
 <!-- Internal scripts -->
-<script type="text/javascript" src="../scripts/min/paper-full.min.js"></script>
-<script type="text/javascript" src="../scripts/whiteboard.js"></script>
-<script type="text/javascript" src="../scripts/wb-paper.js"></script>
+<script src="../scripts/whiteboard.js"></script>
+<script src="../scripts/wb-paper.js"></script>
 </body>
 </html>

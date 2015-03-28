@@ -1,3 +1,4 @@
+/* custom bootstrap styles */
 .btn-custom-font {
     color: #eee8d5;
     text-shadow: 1px 1px 1px #686868;
@@ -166,4 +167,17 @@ fieldset[disabled] .btn-custom.active {
     .collapse.in{
         display:block !important;
     }
+}
+
+/* editor and modal junk */
+#editor {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+}
+
+.modal-body {
+    min-height: 400px;
 }

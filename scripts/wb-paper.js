@@ -124,5 +124,15 @@ var $WBPAPER = window.onload = (function() {
         });
     };
 
+    lp.drawText = function(text, x, y) {
+        new paper.PointText({
+            point: [x, y],
+            content: text,
+            fillColor: 'black',
+            fontFamily: 'Courier New',
+            fontSize: '25'
+        });
+    };
+
     return lp;
 })();
