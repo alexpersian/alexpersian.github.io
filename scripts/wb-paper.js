@@ -125,12 +125,18 @@ var $WBPAPER = window.onload = (function() {
     };
 
     lp.drawText = function(text, x, y) {
+        var color;
+        if ($WBAPP.night) {
+            color = "white";
+        } else {
+            color = "black";
+        }
         new paper.PointText({
             point: [x, y],
             content: text,
-            fillColor: 'black',
-            fontFamily: 'Courier New',
-            fontSize: '25'
+            fillColor: color,
+            fontFamily: 'Source Code Pro',
+            fontSize: '24'
         });
     };
 
