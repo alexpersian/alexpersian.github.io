@@ -10,7 +10,7 @@ function binarySearch(array, target, startIndex, stopIndex) {
     // If start and stop are the same, or they are one apart, stop searching.
     // This indicates that the array is fully searched, and the target hasn't been found.
     if (stopIndex == startIndex || Math.abs(stopIndex - startIndex) == 1) {
-        $('#result').html('not found in array...');
+        $('#result').html('not found. Try a new search.');
         return -1;
     } else { // Otherwise, search the array.
         if (array[pivot] == target) {

@@ -9,5 +9,6 @@
     <orderEntry type="library" name="html5" level="application" />
     <orderEntry type="library" name="ace" level="application" />
     <orderEntry type="library" name="paper-full" level="application" />
+    <orderEntry type="library" name="three" level="application" />
   </component>
 </module>

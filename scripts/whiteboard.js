@@ -31,7 +31,7 @@ var $WBAPP = (function() {
     wb.nightBlack  = '#657b83';
     wb.nightRed    = '#dc322f';
     wb.nightBlue   = '#268bd2';
-    wb.nightGreen  = '#349900';
+    wb.nightGreen  = '#488B3C';
 
     /**
      * Prevents default page scrolling action; fixes iOS 8 drawing bug.
@@ -148,6 +148,7 @@ var $WBAPP = (function() {
                 document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-check\" aria-hidden=\"true\"></span>";
                 wb.bgColor = wb.nightBg;
                 wb.shapeStrokeColor = '#E3F6FF';
+                if (wb.erasing) { wb.erase(); }
                 switch (wb.penColor) {
                     case 'black':
                         wb.penColor = wb.nightBlack;
@@ -167,17 +168,18 @@ var $WBAPP = (function() {
                 document.getElementById('night').innerHTML = "Night Theme <span class=\"glyphicon glyphicon-unchecked\" aria-hidden=\"true\"></span>";
                 wb.bgColor = '#ffffff';
                 wb.shapeStrokeColor = '#95B1BD';
+                if (wb.erasing) { wb.erase(); }
                 switch (wb.penColor) {
-                    case '#495F66':
+                    case wb.nightBlack:
                         wb.penColor = 'black';
                         break;
-                    case '#dc322f':
+                    case wb.nightRed:
                         wb.penColor = 'red';
                         break;
-                    case '#268bd2':
+                    case wb.nightBlue:
                         wb.penColor = 'blue';
                         break;
-                    case '#859900':
+                    case wb.nightGreen:
                         wb.penColor = 'green';
                         break;
                 }

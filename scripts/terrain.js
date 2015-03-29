@@ -67,21 +67,7 @@ $(document).ready(function() {
             geometry.vertices[i].z = Math.floor(
                 3 * (Math.sin(Math.random())) *
                 4 * (Math.sin(Math.random())) * 70);
-            
-            //geometry.vertices[i].z = (Math.pow((Math.random() + 0.1), -1)) * 10;
-            //geometry.vertices[findIndex()] = (Math.seedrandom(i));
         }
-    }
-
-    //function randomize(rows, amplitude) {
-    //    for (var i = 0; i < rows; i++) {
-    //        Math.seedrandom(i);
-    //
-    //    }
-    //}
-
-    function findIndex(x, y, m) {
-        return x * m + y;
     }
 
     window.requestAnimationFrame = (function() {
