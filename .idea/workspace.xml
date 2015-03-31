@@ -1,70 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06816522-7bfb-4b53-bf01-dcddd117f5a9" name="Default" comment="Banana phone added to repo">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/analytics.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/hr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jquery-1.11.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jquery-migrate-1.2.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/min/material.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/min/material.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/min/multi-touch-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/min/paper-full.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/min/ripples.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/min/ripples.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/less/base.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/less/responsive.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/less/styles.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/less/theme-default.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/material.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/material.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/min/material-wfont.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/min/material-wfont.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/min/ripples.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/min/ripples.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/ripples.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/ripples.css.map" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/plugins/jquery-rss/dist/jquery.rss.min.js" afterPath="$PROJECT_DIR$/scripts/min/jquery.rss.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/ajax-index.html" afterPath="$PROJECT_DIR$/html/ajax-index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/alexpersian.github.io.iml" afterPath="$PROJECT_DIR$/.idea/alexpersian.github.io.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/binary.html" afterPath="$PROJECT_DIR$/html/binary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/binary.js" afterPath="$PROJECT_DIR$/scripts/binary.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/bubbles.html" afterPath="$PROJECT_DIR$/html/bubbles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/min/dev-main-min.js" afterPath="$PROJECT_DIR$/scripts/min/dev-main-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/dev-main.js" afterPath="$PROJECT_DIR$/scripts/dev-main.js" />
+    <list default="true" id="06816522-7bfb-4b53-bf01-dcddd117f5a9" name="Default" comment="Modified CSS on index page slightly.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/dev-styles.css" afterPath="$PROJECT_DIR$/styles/dev-styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/picture.html" afterPath="$PROJECT_DIR$/html/picture.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/spotify-app.html" afterPath="$PROJECT_DIR$/html/spotify-app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/terrain.html" afterPath="$PROJECT_DIR$/html/terrain.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/terrain.js" afterPath="$PROJECT_DIR$/scripts/terrain.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/wb-landingpage.html" afterPath="$PROJECT_DIR$/html/wb-landingpage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/min/whiteboard-min.js" afterPath="$PROJECT_DIR$/scripts/min/whiteboard-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/whiteboard.html" afterPath="$PROJECT_DIR$/html/whiteboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/whiteboard.js" afterPath="$PROJECT_DIR$/scripts/whiteboard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="alexpersian.github.io.iws" />
@@ -89,11 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.5240054" vertical-offset="0" max-vertical-offset="3791">
+            <state vertical-scroll-proportion="-9.384615" vertical-offset="3054" max-vertical-offset="3791">
               <caret line="194" column="65" selection-start-line="194" selection-start-column="65" selection-end-line="194" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dev-styles.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles/dev-styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33199194" vertical-offset="566" max-vertical-offset="6001">
+              <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -156,13 +104,13 @@
         <option value="$PROJECT_DIR$/html/picture.html" />
         <option value="$PROJECT_DIR$/html/spotify-app.html" />
         <option value="$PROJECT_DIR$/html/terrain.html" />
-        <option value="$PROJECT_DIR$/styles/dev-styles.css" />
         <option value="$PROJECT_DIR$/scripts/binary.js" />
         <option value="$PROJECT_DIR$/scripts/dev-main.js" />
         <option value="$PROJECT_DIR$/scripts/whiteboard.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/html/wb-landingpage.html" />
         <option value="$PROJECT_DIR$/scripts/terrain.js" />
+        <option value="$PROJECT_DIR$/styles/dev-styles.css" />
       </list>
     </option>
   </component>
@@ -170,9 +118,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="124" />
     <option name="y" value="23" />
-    <option name="width" value="1155" />
+    <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -200,6 +147,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -218,9 +166,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alexpersian.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alexpersian.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alexpersian.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alexpersian.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alexpersian.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alexpersian.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -249,7 +238,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../this4that" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="recentsLimit" value="5" />
@@ -283,10 +272,14 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -294,10 +287,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="MongoRunConfiguration" factoryName="Mongo">
@@ -384,16 +373,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="124" y="23" width="1155" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32950193" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2389937" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19027181" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31241998" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -403,15 +393,14 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22023048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39925373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -433,7 +422,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Banana phone added to repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Banana phone added to repo" />
+    <MESSAGE value="Modified CSS on index page slightly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified CSS on index page slightly." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/dev-styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="6001">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/analytics.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11258278" vertical-offset="0" max-vertical-offset="755">
@@ -778,20 +761,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="583">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.5240054" vertical-offset="0" max-vertical-offset="3791">
+        <state vertical-scroll-proportion="-9.384615" vertical-offset="3054" max-vertical-offset="3791">
           <caret line="194" column="65" selection-start-line="194" selection-start-column="65" selection-end-line="194" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/dev-styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33199194" vertical-offset="566" max-vertical-offset="6001">
+          <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
           <folding />
         </state>
       </provider>
