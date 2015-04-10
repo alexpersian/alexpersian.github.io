@@ -10,5 +10,6 @@
     <orderEntry type="library" name="ace" level="application" />
     <orderEntry type="library" name="paper-full" level="application" />
     <orderEntry type="library" name="three" level="application" />
+    <orderEntry type="library" name="angular" level="application" />
   </component>
 </module>
