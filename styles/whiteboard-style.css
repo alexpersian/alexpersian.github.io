@@ -1,3 +1,6 @@
+body {
+    overflow: hidden;
+}
 /* custom bootstrap styles */
 .btn-custom-font {
     color: #eee8d5;
@@ -132,7 +135,7 @@ fieldset[disabled] .btn-custom.active {
 .navbar-default .navbar-link:hover {
     color: #eee8d5;
 }
-@media (max-width: 1325px) {
+@media (max-width: 1360px) {
     .navbar-header {
         float: none;
     }
