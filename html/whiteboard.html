@@ -23,11 +23,21 @@
             <a class="navbar-brand" href="http://alexpersian.github.io/html/whiteboard.html">Whiteboard</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
+        <ul class="nav navbar-nav">
+            <li class="dropdown" id="themes">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
+                   id="theme">Theme: Default <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#" onclick="$WBAPP.changeTheme('default')">Default</a></li>
+                    <li><a href="#" onclick="$WBAPP.changeTheme('night')">Night</a></li>
+                    <li><a href="#" onclick="$WBAPP.changeTheme('ocean')">Ocean</a></li>
+                    <li><a href="#" onclick="$WBAPP.changeTheme('neon')">Neon</a></li>
+                    <li><a href="#" onclick="$WBAPP.changeTheme('slate')">Slate</a></li>
+                </ul>
+            </li>
+        </ul>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <form class="nav navbar-btn navbar-left">
-                <button type="button" class="btn btn-custom-font btn-info" id="night" onclick="$WBAPP.nightTheme()">
-                    Night Theme <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
-                </button>
                 <button type="button" class="btn btn-custom" id="penBlack"
                         onclick="$WBAPP.changeColor('black')">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -70,32 +80,55 @@
                 </li>
             </ul>
             <form class="nav navbar-btn navbar-left">
-                <button type="button" class="btn btn-custom-font btn-warning" id="erase" onclick="$WBAPP.erase()">
-                    Erase <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+                <button type="button" class="btn btn-custom-font btn-danger" id="erase" onclick="$WBAPP.erase()">
+                    Erase <span id="eraseIndicator" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
                 </button>
-                <button type="button" class="btn btn-custom-font btn-warning" id="undo" onclick="$WBAPP.undo()">
+                <button type="button" class="btn btn-custom-font btn-danger" id="undo" onclick="$WBAPP.undo()">
                     Undo <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
                 </button>
-                <button type="button" class="btn btn-custom-font btn-warning" id="clear" onclick="$WBAPP.clear()">
+                <button type="button" class="btn btn-custom-font btn-danger" id="clear" onclick="$WBAPP.clear()">
                     Clear <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
                 </button>
             </form>
+            <form class="nav navbar-btn navbar-left">
+                <button id="moveBtn" type="button" class="btn btn-primary btn-custom-font" onclick="$WBAPP.activateMoveMode()">
+                    Move <span id="moveIndicator" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+                </button>
+            </form>
             <ul class="nav navbar-nav">
-                <li class="dropdown" id="chooseShape">
+                <li class="dropdown" id="textSize">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
-                       id="shapeChoice">Shapes <span class="caret"></span>
-                    </a>
+                       id="textDisplay">Text Size: 40 <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#" onclick="$WBAPP.changeShape('Terminator')">Terminator</a></li>
-                        <li><a href="#" onclick="$WBAPP.changeShape('Process')">Process</a></li>
+                        <li><a href="#" onclick="$WBAPP.changeTextSize(60)">60</a></li>
+                        <li><a href="#" onclick="$WBAPP.changeTextSize(50)">50</a></li>
+                        <li><a href="#" onclick="$WBAPP.changeTextSize(40)">40</a></li>
+                        <li><a href="#" onclick="$WBAPP.changeTextSize(30)">30</a></li>
+                        <li><a href="#" onclick="$WBAPP.changeTextSize(20)">20</a></li>
                     </ul>
                 </li>
             </ul>
             <form class="nav navbar-btn navbar-left">
-                <button type="button" class="btn btn-info btn-custom-font" onclick="$WBAPP.createShape()">
-                    Place <span id="createShape" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-custom-font btn-success" id="show-editor">Input Text</button>
+                <!-- Split button -->
+                <div id="shapeBtn" class="btn-group">
+                    <button id="shapeChoice" type="button" class="btn btn-primary btn-custom-font" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span> Shapes
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="btn shapeText">
+                        <input id="shapeText" type="text" class="form-control shapeText" placeholder="Text!">
+                    </div><!-- /input-group -->
+                    <button id="createShape" type="button" class="btn btn-primary btn-custom-font" onclick="$WBAPP.activateShapeMode()">
+                        <span id="shapeIndicator" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+                    </button>
+                    <!--<button id="shapeChoice" type="button" class="btn btn-primary btn-custom-font" onclick="$WBAPP.activateShapeMode()">Shapes <span class="caret"></span></button>-->
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="$WBAPP.changeShape('Text')">Text</a></li>
+                        <li><a href="#" onclick="$WBAPP.changeShape('Terminator')">Terminator</a></li>
+                        <li><a href="#" onclick="$WBAPP.changeShape('Process')">Process</a></li>
+                    </ul>
+                </div>
+                <!--<button type="button" class="btn btn-custom-font btn-success" id="show-editor">Input Text</button>-->
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -130,7 +163,7 @@
     </div>
 </div>
 <!-- External scripts -->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.8/ace.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.22/paper-full.min.js"></script>
