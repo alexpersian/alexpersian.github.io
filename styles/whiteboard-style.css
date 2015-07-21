@@ -87,11 +87,12 @@ fieldset[disabled] .btn-custom.active {
 
 .navbar {
     margin-bottom: 0;
+    border-radius: 0;
 }
 
 .navbar-default {
     background-color: #586e75;
-    border-color: #93a1a1;
+    border-color: #586e75;
 }
 .navbar-default .navbar-brand {
     color: #eee8d5;
@@ -183,4 +184,45 @@ fieldset[disabled] .btn-custom.active {
 
 .modal-body {
     min-height: 400px;
+}
+#shapeBtn {
+    position: relative;
+    padding-left: 3px;
+    width: 280px;
+    height: 35px;
+}
+#textInput {
+    margin-left: 3px;
+    width: 150px;
+}
+#moveBtn {
+    margin-left: 3px;
+}
+#dropdown {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    /*float: right;*/
+}
+#createShape {
+    border-radius: 0 5px 5px 0;
+}
+.shapeText {
+    width: 100px;
+    padding: 0;
+    margin-left: 0;
+    border-radius: 0;
+    height: 32px;
+}
+#penDisplay {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+#eraseDisplay {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+#textDisplay {
+    padding-left: 3px;
+    padding-right: 3px;
 }
