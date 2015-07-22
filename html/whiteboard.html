@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- NavBar -->
-<nav class="navbar navbar-default" role="navigation">
+<nav id="navBar" class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -20,17 +20,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://alexpersian.github.io/html/whiteboard.html">Whiteboard</a>
+            <a class="navbar-brand" href="http://alexpersian.github.io/html/whiteboard.html">NerdBoard</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <ul class="nav navbar-nav">
             <li class="dropdown" id="themes">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
-                   id="theme">Theme: Default <span class="caret"></span></a>
+                   id="theme"><span class="caret"></span> Theme: Default</a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="#" onclick="$WBAPP.changeTheme('default')">Default</a></li>
                     <li><a href="#" onclick="$WBAPP.changeTheme('night')">Night</a></li>
-                    <li><a href="#" onclick="$WBAPP.changeTheme('ocean')">Ocean</a></li>
                     <li><a href="#" onclick="$WBAPP.changeTheme('neon')">Neon</a></li>
                     <li><a href="#" onclick="$WBAPP.changeTheme('slate')">Slate</a></li>
                 </ul>
@@ -38,27 +37,31 @@
         </ul>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <form class="nav navbar-btn navbar-left">
-                <button type="button" class="btn btn-custom" id="penBlack"
+                <button type="button" class="btn btn-custom penBlack padding"
                         onclick="$WBAPP.changeColor('black')">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
-                <button type="button" class="btn btn-custom-font btn-danger" id="penRed"
+                <button type="button" class="btn btn-custom-font btn-danger penRed"
                         onclick="$WBAPP.changeColor('red')">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
-                <button type="button" class="btn btn-custom-font btn-success" id="penGreen"
+                <button type="button" class="btn btn-custom-font btn-success penGreen"
                         onclick="$WBAPP.changeColor('green')">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
-                <button type="button" class="btn btn-custom-font btn-primary" id="penBlue"
+                <button type="button" class="btn btn-custom-font btn-primary penBlue"
                         onclick="$WBAPP.changeColor('blue')">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-custom-font penYellow"
+                        onclick="$WBAPP.changeColor('yellow')">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
             </form>
             <ul class="nav navbar-nav">
-                <li class="dropdown" id="penWidth">
+                <li class="dropdown padding" id="penWidth">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
-                       id="penDisplay">Pen Width: 3 <span class="caret"></span></a>
+                       id="penDisplay"><span class="caret"></span> Pen Width: 3</a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#" onclick="$WBAPP.changePenWidth(5)">5</a></li>
                         <li><a href="#" onclick="$WBAPP.changePenWidth(4)">4</a></li>
@@ -69,7 +72,7 @@
                 </li>
                 <li class="dropdown" id="eraseWidth">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
-                       id="eraseDisplay">Eraser Width: 30 <span class="caret"></span></a>
+                       id="eraseDisplay"><span class="caret"></span> Eraser Width: 30</a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#" onclick="$WBAPP.changeEraserWidth(50)">50</a></li>
                         <li><a href="#" onclick="$WBAPP.changeEraserWidth(40)">40</a></li>
@@ -80,25 +83,28 @@
                 </li>
             </ul>
             <form class="nav navbar-btn navbar-left">
-                <button type="button" class="btn btn-custom-font btn-danger" id="erase" onclick="$WBAPP.erase()">
+                <button type="button" class="btn btn-custom-font btn-danger penRed padding" id="erase" onclick="$WBAPP.toggleEraseMode()">
                     Erase <span id="eraseIndicator" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
                 </button>
-                <button type="button" class="btn btn-custom-font btn-danger" id="undo" onclick="$WBAPP.undo()">
+                <button type="button" class="btn btn-custom-font btn-danger penRed" id="undo" onclick="$WBAPP.undo()">
                     Undo <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
                 </button>
-                <button type="button" class="btn btn-custom-font btn-danger" id="clear" onclick="$WBAPP.clear()">
+                <button type="button" class="btn btn-custom-font btn-danger penRed" id="clear" onclick="$WBAPP.clear()">
                     Clear <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
                 </button>
             </form>
             <form class="nav navbar-btn navbar-left">
-                <button id="moveBtn" type="button" class="btn btn-primary btn-custom-font" onclick="$WBAPP.activateMoveMode()">
+                <button id="moveBtn" type="button" class="btn btn-primary btn-custom-font penBlue" onclick="$WBAPP.toggleMoveMode()">
                     Move <span id="moveIndicator" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+                </button>
+                <button id="panBtn" type="button" class="btn btn-primary btn-custom-font penBlue" onclick="$WBAPP.togglePanMode()">
+                    Pan <span id="panIndicator" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
                 </button>
             </form>
             <ul class="nav navbar-nav">
-                <li class="dropdown" id="textSize">
+                <li class="dropdown padding" id="textSize">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
-                       id="textDisplay">Text Size: 40 <span class="caret"></span></a>
+                       id="textDisplay"><span class="caret"></span> Text Size: 40</a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#" onclick="$WBAPP.changeTextSize(60)">60</a></li>
                         <li><a href="#" onclick="$WBAPP.changeTextSize(50)">50</a></li>
@@ -109,42 +115,55 @@
                 </li>
             </ul>
             <form class="nav navbar-btn navbar-left">
-                <!-- Split button -->
-                <div id="shapeBtn" class="btn-group">
-                    <button id="shapeChoice" type="button" class="btn btn-primary btn-custom-font" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="caret"></span> Shapes
-                        <span class="sr-only">Toggle Dropdown</span>
-                    </button>
-                    <div class="btn shapeText">
-                        <input id="shapeText" type="text" class="form-control shapeText" placeholder="Text!">
-                    </div><!-- /input-group -->
-                    <button id="createShape" type="button" class="btn btn-primary btn-custom-font" onclick="$WBAPP.activateShapeMode()">
-                        <span id="shapeIndicator" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
-                    </button>
-                    <!--<button id="shapeChoice" type="button" class="btn btn-primary btn-custom-font" onclick="$WBAPP.activateShapeMode()">Shapes <span class="caret"></span></button>-->
-                    <ul class="dropdown-menu">
-                        <li><a href="#" onclick="$WBAPP.changeShape('Text')">Text</a></li>
-                        <li><a href="#" onclick="$WBAPP.changeShape('Terminator')">Terminator</a></li>
-                        <li><a href="#" onclick="$WBAPP.changeShape('Process')">Process</a></li>
-                    </ul>
+                <div class="input-group shapeTextDiv">
+                    <div class="input-group-btn">
+                        <!-- Button and dropdown menu -->
+                        <button id="shapeChoice" type="button" class="btn btn-primary btn-custom-font penBlue padding" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span> Text
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a id="defaultShape" href="#" onclick="$WBAPP.changeShape('Text')">Text</a></li>
+                            <li><a href="#" onclick="$WBAPP.changeShape('Terminal')">Terminal</a></li>
+                            <li><a href="#" onclick="$WBAPP.changeShape('Process')">Process</a></li>
+                            <li><a href="#" onclick="$WBAPP.changeShape('Input')">Input / Output</a></li>
+                            <li><a href="#" onclick="$WBAPP.changeShape('Decision')">Decision</a></li>
+                        </ul>
+                    </div>
+                    <input id="shapeText" type="text" class="form-control" placeholder="Input Text!">
+                    <div class="input-group-btn">
+                        <!-- Button and dropdown menu -->
+                        <button id="createShape" type="button" class="btn btn-primary btn-custom-font penBlue" onclick="$WBAPP.toggleShapeMode()">
+                            <span id="shapeIndicator" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+                        </button>
+                    </div>
                 </div>
-                <!--<button type="button" class="btn btn-custom-font btn-success" id="show-editor">Input Text</button>-->
             </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" id="btn-save">
-                       Save <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
-                    </a>
+            <ul class="nav navbar-nav">
+                <li class="dropdown padding">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="caret"></span> Save</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" id="saveImg"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Image</a></li>
+                        <li><a href="#" onclick="$WBAPP.saveAsWorkSpace()"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> WorkSpace</a></li>
+                    </ul>
                 </li>
-                <li class="btn navbar-btn navbar-right btn-file btn-custom-font">
-                    <input type="file" id="btn-load">
-                    Load <span class="glyphicon glyphicon-open"></span>
+                <li class="dropdown padding">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="caret"></span> Load</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="btn btn-file">
+                            <input type="file" id="uploadImg">
+                            <a id="loadImg" href="#"><span class="glyphicon glyphicon-open"></span> Image</a>
+                        </li>
+                        <li><a id="loadWorkSpace" href="#" onclick="$WBAPP.loadWorkSpace()"><span class="glyphicon glyphicon-open"></span> WorkSpace</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<canvas id="my-canvas"></canvas>
+<canvas id="my-canvas" resize></canvas>
 <div id="my-modal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">

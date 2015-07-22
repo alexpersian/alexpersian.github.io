@@ -26,10 +26,16 @@ var $WBPAPER = window.onload = (function() {
     // Covers the canvas in a white rectangle to prevent transparent background on save.
     // Drawings are created on top of this rectangle.
     lp.drawBackground = function () {
-        var rectangle = new paper.Rectangle(new paper.Point(0, 0), new paper.Point($WBAPP.width, $WBAPP.height));
-        var rectPath = new paper.Path.Rectangle(rectangle);
-        rectPath.fillColor = $WBAPP.theme.bg;
-        rectPath.name = 'bg';
+        //if(paper.project.activeLayer.children['bg']) {
+        //    paper.project.activeLayer.children['bg'].remove();
+        //}
+        var rectangle = new paper.Path.Rectangle({
+            center: paper.view.center,
+            size: [$WBAPP.width, $WBAPP.height],
+            fillColor: $WBAPP.theme.bg,
+            name: 'bg'
+        });
+
         paper.view.update();
     };
     lp.drawBackground();
@@ -80,7 +86,21 @@ var $WBPAPER = window.onload = (function() {
         mousePoint = event.point;
         lp.drawShape(mousePoint, $WBAPP.shape, $('#shapeText')[0].value);
     };
+    lp.tools.shape.onMouseDrag = function(event) {
+        var last = paper.project.activeLayer.children[paper.project.activeLayer.children.length - 1];
 
+        if($WBAPP.shape == 'Text') {
+            last.position = event.point;
+        }
+        else {
+            var secondlast = paper.project.activeLayer.children[paper.project.activeLayer.children.length - 2];
+
+            last.position = event.point;
+            secondlast.position = event.point;
+        }
+    };
+    lp.tools.shape.minDistance = 1;
+    lp.tools.shape.maxDistance = 3;
 
 
 
@@ -96,12 +116,14 @@ var $WBPAPER = window.onload = (function() {
     };
     lp.tools.move.onMouseDrag = function(event) {
         var firstThree = pathHit.name[0] + pathHit.name[1]  + pathHit.name[2];
-        var last = pathHit.name[pathHit.name.length - 1];
+        var last = pathHit.name[pathHit.name.length - 1], numOfDigits, id;
 
         if (pathHit && pathHit.name !== 'bg') {
             if (firstThree == 'rec' || firstThree == 'tex')  {
-                paper.project.activeLayer.children['rect' + last].position = event.point;
-                paper.project.activeLayer.children['text' + last].position = event.point;
+                id = pathHit.name.slice(4, pathHit.name.length);
+
+                paper.project.activeLayer.children['rect' + id].position = event.point;
+                paper.project.activeLayer.children['text' + id].position = event.point;
             }
             else{
                 pathHit.position = event.point;
@@ -112,11 +134,39 @@ var $WBPAPER = window.onload = (function() {
     lp.tools.move.maxDistance = 3;
 
 
+
+    lp.tools.pan = new paper.Tool();
+    lp.tools.pan.onMouseDown = function(event) {
+        paper.project.activeLayer.position = event.point;
+    };
+    lp.tools.pan.onMouseDrag = function(event) {
+        paper.project.activeLayer.position = event.point;
+    };
+    lp.tools.pan.minDistance = 1;
+    lp.tools.pan.maxDistance = 3;
+
+
     lp.undo = function() {
-        if(paper.project.activeLayer.children.length > 0){
-            console.log(paper.project.activeLayer.children[paper.project.activeLayer.children.length - 1].name);
-            if(paper.project.activeLayer.children[paper.project.activeLayer.children.length - 1].name !== 'bg') {
-                paper.project.activeLayer.children[paper.project.activeLayer.children.length - 1].remove();
+        var children = paper.project.activeLayer.children;
+        var lastIndex = children.length - 1;
+        var id, numOfDigits;
+
+
+        if(children.length > 0){
+            if(children[lastIndex].name !== 'bg') {
+                var firstThree = children[lastIndex].name[0] + children[lastIndex].name[1] + children[lastIndex].name[2];
+
+                if (firstThree == 'rec' || firstThree == 'tex')  {
+                    $WBAPP.numOfShapes--;
+                    numOfDigits = $WBAPP.numOfShapes.toString().length;
+                    id = children[lastIndex].name.slice(children[lastIndex].name.length - numOfDigits, children[lastIndex].name.length);
+
+                    children['rect' + id].remove();
+                    children['text' + id].remove();
+                }
+                else {
+                    children[lastIndex].remove();
+                }
             }
         }
         paper.view.draw();
@@ -156,6 +206,9 @@ var $WBPAPER = window.onload = (function() {
             if(paths[i].name == 'red') {
                 paths[i].strokeColor = $WBAPP.theme.red;
             }
+            if(paths[i].name == 'yellow') {
+                paths[i].strokeColor = $WBAPP.theme.yellow;
+            }
             if(paths[i].name == 'plainText') {
                 paths[i].fillColor = $WBAPP.theme.black;
                 paths[i].strokeColor = $WBAPP.theme.black;
@@ -163,12 +216,20 @@ var $WBPAPER = window.onload = (function() {
             if(paths[i].name == 'erase') {
                 paths[i].strokeColor = $WBAPP.theme.bg;
             }
-            if(firstThree == 'tex') {
-                paths[i].fillColor = $WBAPP.theme.black;
+            if(paths[i].identifier == 'Terminal') {
+                paths[i].fillColor = $WBAPP.theme.blue;
                 paths[i].strokeColor = $WBAPP.theme.black;
             }
-            if(firstThree == 'rec') {
-                paths[i].fillColor = $WBAPP.theme.bg;
+            if(paths[i].identifier == 'Process') {
+                paths[i].fillColor = $WBAPP.theme.yellow;
+                paths[i].strokeColor = $WBAPP.theme.black;
+            }
+            if(paths[i].identifier == 'Input') {
+                paths[i].fillColor = $WBAPP.theme.red;
+                paths[i].strokeColor = $WBAPP.theme.black;
+            }
+            if(paths[i].identifier == 'Decision') {
+                paths[i].fillColor = $WBAPP.theme.green;
                 paths[i].strokeColor = $WBAPP.theme.black;
             }
         }
@@ -181,51 +242,110 @@ var $WBPAPER = window.onload = (function() {
     // Creates paths and options for each shape available for the canvas
     // Shapes are only created if the program is in shape mode
     lp.drawShape = function(location, shape, message) {
+        var rect, text;
+
         switch(shape) {
-            case 'Terminator':
+            case 'Terminal':
                 rect = new paper.Path.Rectangle({
                     center: location,
                     size: [($WBAPP.textSize * message.length) / ( 1 + (message.length / 18)), $WBAPP.textSize],
-                    fillColor: $WBAPP.theme.bg,
+                    fillColor: $WBAPP.theme.blue,
                     strokeColor: $WBAPP.theme.black,
                     strokeWidth: 2,
                     radius: $WBAPP.textSize / 2,
-                    name: 'rect' + $WBAPP.numOfShapes.toString()
+                    name: 'rect' + $WBAPP.numOfShapes.toString(),
+                    identifier: 'Terminal'
                 });
 
                 var text = new PointText({
-                    point: new Point(location.x, location.y + Math.round($WBAPP.textSize / 3)),
                     content: message,
-                    justification: 'center',
-                    fontSize: $WBAPP.textSize,
                     name: 'text' + $WBAPP.numOfShapes.toString()
                 });
-                text.fillColor = $WBAPP.theme.black;
-                text.strokeColor = $WBAPP.theme.black;
+                text.style = {
+                    fontFamily: 'sans-serif',
+                    fontSize: $WBAPP.textSize,
+                    justification: 'center'
+                };
+
+                text.fitBounds(rect.bounds);
                 break;
             case 'Process':
                 rect = new paper.Path.Rectangle({
                     center: location,
                     size: [($WBAPP.textSize * message.length) / ( 1 + (message.length / 12)), $WBAPP.textSize],
-                    fillColor: $WBAPP.theme.bg,
+                    fillColor: $WBAPP.theme.yellow,
                     strokeColor: $WBAPP.theme.black,
                     strokeWidth: 2,
-                    name: 'rect' + $WBAPP.numOfShapes.toString()
+                    name: 'rect' + $WBAPP.numOfShapes.toString(),
+                    identifier: 'Process'
                 });
 
                 var text = new PointText({
-                    point: new Point(location.x, location.y + Math.round($WBAPP.textSize / 3)),
                     content: message,
-                    justification: 'center',
-                    fontSize: $WBAPP.textSize,
                     name: 'text' + $WBAPP.numOfShapes.toString()
                 });
-                text.fillColor = $WBAPP.theme.black;
-                text.strokeColor = $WBAPP.theme.black;
+                text.style = {
+                    fontFamily: 'sans-serif',
+                    fontSize: $WBAPP.textSize,
+                    justification: 'center'
+                };
+
+                text.fitBounds(rect.bounds);
+                break;
+            case 'Decision':
+                rect = new paper.Path.Rectangle({
+                    center: location,
+                    size: [($WBAPP.textSize * message.length) / ( 1 + (message.length / 12)), ($WBAPP.textSize * message.length) / ( 1 + (message.length / 12))],
+                    fillColor: $WBAPP.theme.green,
+                    strokeColor: $WBAPP.theme.black,
+                    strokeWidth: 2,
+                    name: 'rect' + $WBAPP.numOfShapes.toString(),
+                    identifier: 'Decision'
+                });
+                rect._segments[0].point._x += $WBAPP.textSize + 1;
+                rect._segments[1].point._x += $WBAPP.textSize + 1;
+                rect._segments[1].point._y += $WBAPP.textSize + 1;
+                rect._segments[2].point._y += $WBAPP.textSize + 1;
+                rect.rotate(45);
+
+                var text = new PointText({
+                    content: message,
+                    name: 'text' + $WBAPP.numOfShapes.toString()
+                });
+                text.style = {
+                    fontFamily: 'sans-serif',
+                    fontSize: $WBAPP.textSize,
+                    justification: 'center'
+                };
+                text.position = rect.position;
+                break;
+            case 'Input':
+                rect = new Path.RegularPolygon(location, 4, ($WBAPP.textSize * message.length) / 2);
+                rect.fillColor = $WBAPP.theme.red;
+                rect.strokeColor = $WBAPP.theme.black;
+                rect.strokeWidth = 2;
+                rect.name = 'rect' + $WBAPP.numOfShapes.toString();
+                rect._segments[1].point._x += $WBAPP.textSize;
+                rect._segments[1].point._y += $WBAPP.textSize + 15;
+                rect._segments[2].point._x += $WBAPP.textSize;
+                rect._segments[2].point._y += $WBAPP.textSize + 15;
+                rect.identifier = 'Input';
+
+
+                var text = new PointText({
+                    content: message,
+                    name: 'text' + $WBAPP.numOfShapes.toString()
+                });
+                text.style = {
+                    fontFamily: 'sans-serif',
+                    fontSize: $WBAPP.textSize,
+                    justification: 'center'
+                };
+                text.position = rect.position;
                 break;
             case 'Text':
-                var text = new PointText({
-                    point: new Point(location.x, location.y + 13),
+                text = new PointText({
+                    point: location,
                     content: message,
                     justification: 'center',
                     fontSize: $WBAPP.textSize,
