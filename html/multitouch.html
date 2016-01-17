@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../scripts/min/paper-full.min.js"></script>
+
+    <script type="application/javascript">
+        window.onload = function() {
+            //Array to store new paths
+            var paths = [];
+
+            function touchStart(ev) {
+                var touches = ev.touches;
+                // Create new path per touch
+                var path = new Path();
+                path.strokeColor = 'red';
+                path.strokeWidth = 4;
+                paths.push(path);
+            }
+
+            function touchMove(ev) {
+                var touches = ev.touches;
+                // Prevents touch bubbling
+                if(touches.length === paths.length) {
+                    for(var i = 0; i < touches.length; i++){
+                        var path = paths[i];
+                        var point = view.getEventPoint(touches[i]);
+                        path.add(point);
+                        view.draw();
+                    }
+                }
+            }
+
+            function touchEnd(ev){
+                var touches = ev.touches;
+                // Empty paths array to start process over
+                if(touches.length === 0){
+                    paths = [];
+                }
+            }
+
+            document.body.addEventListener('touchstart', touchStart, false);
+            document.body.addEventListener('touchmove', touchMove, false);
+            document.body.addEventListener('touchend', touchEnd, false);
+        }
+    </script>
+    <style>
+        #myCanvas {
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" resize style="background-color: #93a1a1"></canvas>
+</body>
+</html>
