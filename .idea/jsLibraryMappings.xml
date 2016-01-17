@@ -2,7 +2,6 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$/scripts/bubbly.js" libraries="{jquery}" />
-    <file url="file://$PROJECT_DIR$/scripts/terrain.js" libraries="{three}" />
-    <file url="PROJECT" libraries="{ace, angular, bootstrap, html5, jquery, paper-full}" />
+    <file url="PROJECT" libraries="{bootstrap, jquery}" />
   </component>
 </project>

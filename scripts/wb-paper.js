@@ -65,9 +65,20 @@ var $WBPAPER = window.onload = (function() {
         //    shapePath.point += event.delta;
         //}
 
-        if (lp.drawingMode) {
-            myPath.add(event.point);
+        var touches = event.touches;
+
+        if (touches.length === paths.length) {
+            for (var i = 0; i < touches.length; i++) {
+                myPath = paths[i];
+                var point = self.view.getEventPoint(touches[i]);
+                myPath.add(point);
+                self.view.draw();
+            }
         }
+
+        //if (lp.drawingMode) {
+        //    myPath.add(event.point);
+        //}
     };
 
     tool.onMouseUp = function() {
