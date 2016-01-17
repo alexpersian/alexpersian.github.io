@@ -10,7 +10,7 @@ var $WBPAPER = window.onload = (function() {
 
     paper.setup($WBAPP.canvas);
 
-    var myPath;
+    var myPath = new paper.Path();
     var tool = new paper.Tool();
     var mousePoint = paper.view.center;
     lp.drawingMode = true;
@@ -65,20 +65,20 @@ var $WBPAPER = window.onload = (function() {
         //    shapePath.point += event.delta;
         //}
 
-        var touches = event.touches;
-
-        if (touches.length === paths.length) {
-            for (var i = 0; i < touches.length; i++) {
-                myPath = paths[i];
-                var point = self.view.getEventPoint(touches[i]);
-                myPath.add(point);
-                self.view.draw();
-            }
-        }
-
-        //if (lp.drawingMode) {
-        //    myPath.add(event.point);
+        //var touches = event.touches;
+        //
+        //if (touches.length === paths.length) {
+        //    for (var i = 0; i < touches.length; i++) {
+        //        myPath = paths[i];
+        //        var point = paper.view.getEventPoint(touches[i]);
+        //        myPath.add(point);
+        //        self.view.draw();
+        //    }
         //}
+
+        if (lp.drawingMode) {
+            myPath.add(event.point);
+        }
     };
 
     tool.onMouseUp = function() {
