@@ -6,11 +6,16 @@
     <script src="../scripts/min/paper-full.min.js"></script>
 
     <script type="application/javascript">
+        paper.install(window);
         window.onload = function() {
-            //Array to store new paths
+            // Get a reference to the canvas object
+            var canvas = document.getElementById('myCanvas');
+            // Create an empty project and a view for the canvas:
+            paper.setup(canvas);
             var paths = [];
 
             function touchStart(ev) {
+                console.log("boop");
                 var touches = ev.touches;
                 // Create new path per touch
                 var path = new Path();
@@ -20,6 +25,8 @@
             }
 
             function touchMove(ev) {
+                console.log("beep");
+                event.preventDefault();
                 var touches = ev.touches;
                 // Prevents touch bubbling
                 if(touches.length === paths.length) {
@@ -33,6 +40,7 @@
             }
 
             function touchEnd(ev){
+                console.log("bopp");
                 var touches = ev.touches;
                 // Empty paths array to start process over
                 if(touches.length === 0){
@@ -47,12 +55,13 @@
     </script>
     <style>
         #myCanvas {
-            width: 800px;
-            height: 400px;
+            width: 100%;
+            height: 100%;
+            background-color: grey;
         }
     </style>
 </head>
 <body>
-    <canvas id="myCanvas" resize style="background-color: #93a1a1"></canvas>
+    <canvas id="myCanvas" resize></canvas>
 </body>
 </html>
