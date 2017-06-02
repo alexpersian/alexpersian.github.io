@@ -4,6 +4,65 @@
 $(document).ready(function() {
     console.log('ready');
 
+    // Authorization info
+    var CLIENT_ID = "d96dcdaf6e674b46a1bf42d5f6367889";
+    var AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
+    var REDIRECT_URI = "http://alexpersian.com/html/spotify-app.html";
+
+    // Implicit Grant auth process
+    // Referencing Spotify's example
+    var stateKey = 'auth_state_key';
+
+    // Parse out the parameters from the URL hash
+    function getHashParams() {
+        var hashParams = {};
+        var e, r = /([^&;=]+)=?([^&;]*)/g,
+            q = window.location.hash.substring(1);
+        while (e = r.exec(q)) {
+            hashParams[e[1]] = decodeURIComponent(e[2]);
+        }
+        return hashParams;
+    };
+
+    // Random string used for state value
+    function generateRandomString(length) {
+        var text = '';
+        var possibilities = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for (var i = 0; i < length; i++) {
+            text += possibilities.charAt(Math.floor(Math.random() * possibilities.length));
+        }
+        return text;
+    };
+
+    var params = getHashParams();
+    // var accessToken = params.access_token,
+    var accessToken = "BQBDggJ3IWiDGYYsXpWBTMbwRQHE74LsK8b6g_jiyTQq25ajL6mUx-70eqNdAjB6vMujPtPhZeaWTCz9yMHM3sWfoN5cXLdYnf-ya4MLLUJV76QDEm4n6RNbnucbJMXFPx-eaD-CItGhNDqnosK3",
+        state = params.state,
+        storedState = localStorage.getItem(stateKey);
+
+    // Check if we have a valid access token already
+    if (accessToken && (state == null || state !== storedState)) {
+        // alert('Error during authentication...');
+        $('#query').prop('placeholder', 'Please login...');
+        $('#query').prop('readonly', true);
+        $('#search').hide();
+    } else {
+        localStorage.removeItem(stateKey)
+    }
+
+    $('#login').click(function login() {
+        var state = generateRandomString(16);
+        localStorage.setItem(stateKey, state);
+
+        var authURL = 'https://accounts.spotify.com/authorize';
+        authURL += '?response_type=token';
+        authURL += '&client_id=' + encodeURIComponent(CLIENT_ID);
+        authURL += '&redirect_uri=' + encodeURIComponent(REDIRECT_URI);
+        authURL += '&state=' + encodeURIComponent(state);
+
+        window.location = authURL;
+    });
+
     // Handlebars templates for DOM manipulation
     var searchTemplateSource = $("#search-template").html(),
         searchTemplate = Handlebars.compile(searchTemplateSource),
@@ -48,6 +107,9 @@ $(document).ready(function() {
                 q: query,
                 type: 'album'
             },
+            headers: {
+              'Authorization': 'Bearer ' + accessToken
+            },
             success: function(response) {
                 console.log(response);
                 searchResultsPlaceholder.html(searchTemplate(response));
@@ -70,12 +132,18 @@ $(document).ready(function() {
                 q: query,
                 type: 'artist'
             },
+            headers: {
+              'Authorization': 'Bearer ' + accessToken
+            },
             success: function(response) {
                 console.log(response);
                 artistId = response.artists.items["0"].id;
                 $.ajax({
                     type: 'GET',
                     url: 'https://api.spotify.com/v1/artists/' + artistId + '/related-artists',
+                    headers: {
+                      'Authorization': 'Bearer ' + accessToken
+                    },
                     success: function(response) {
                         console.log(response);
                         relatedResultsPlaceholder.html(relatedTemplate(response));
@@ -94,6 +162,9 @@ $(document).ready(function() {
     var fetchTracks = function(albumId, callback) {
         $.ajax({
             url: 'https://api.spotify.com/v1/albums/' + albumId,
+            headers: {
+              'Authorization': 'Bearer ' + accessToken
+            },
             success: function(response) {
                 callback(response);
             }
