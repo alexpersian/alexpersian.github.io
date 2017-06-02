@@ -41,12 +41,16 @@ $(document).ready(function() {
 
     // Check if we have a valid access token already
     if (accessToken && (state == null || state !== storedState)) {
-        $('#query').prop('placeholder', 'Please login...');
-        $('#query').prop('readonly', true);
-        $('#search').hide();
+        alert('Authorization error...');
     } else {
         localStorage.removeItem(stateKey);
-        $('#login').hide();
+        if (accessToken) {
+            $('#login').hide();
+        } else {
+            $('#query').prop('placeholder', 'Please login...');
+            $('#query').prop('readonly', true);
+            $('#search').hide();
+        }
     }
 
     // Basic login auth flow
