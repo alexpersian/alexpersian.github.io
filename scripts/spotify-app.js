@@ -35,21 +35,21 @@ $(document).ready(function() {
     };
 
     var params = getHashParams();
-    // var accessToken = params.access_token,
-    var accessToken = "BQBDggJ3IWiDGYYsXpWBTMbwRQHE74LsK8b6g_jiyTQq25ajL6mUx-70eqNdAjB6vMujPtPhZeaWTCz9yMHM3sWfoN5cXLdYnf-ya4MLLUJV76QDEm4n6RNbnucbJMXFPx-eaD-CItGhNDqnosK3",
+    var accessToken = params.access_token,
         state = params.state,
         storedState = localStorage.getItem(stateKey);
 
     // Check if we have a valid access token already
     if (accessToken && (state == null || state !== storedState)) {
-        // alert('Error during authentication...');
         $('#query').prop('placeholder', 'Please login...');
         $('#query').prop('readonly', true);
         $('#search').hide();
     } else {
-        localStorage.removeItem(stateKey)
+        localStorage.removeItem(stateKey);
+        $('#login').hide();
     }
 
+    // Basic login auth flow
     $('#login').click(function login() {
         var state = generateRandomString(16);
         localStorage.setItem(stateKey, state);
