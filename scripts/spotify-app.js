@@ -2,7 +2,6 @@
  * Created by alexpersian on 12/31/14.
  */
 $(document).ready(function() {
-    console.log('ready');
 
     // Authorization info
     var CLIENT_ID = "d96dcdaf6e674b46a1bf42d5f6367889";
@@ -11,7 +10,7 @@ $(document).ready(function() {
 
     // Implicit Grant auth process
     // Referencing Spotify's example
-    var stateKey = 'auth_state_key';
+    var stateKey = 'auth_state';
 
     // Parse out the parameters from the URL hash
     function getHashParams() {
@@ -42,6 +41,9 @@ $(document).ready(function() {
     // Check if we have a valid access token already
     if (accessToken && (state == null || state !== storedState)) {
         alert('Authorization error...');
+        $('#query').prop('placeholder', 'Please login...');
+        $('#query').prop('readonly', true);
+        $('#search').hide();
     } else {
         localStorage.removeItem(stateKey);
         if (accessToken) {

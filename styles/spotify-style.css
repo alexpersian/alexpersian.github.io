@@ -9,6 +9,8 @@ body {
 
 #header-image {
     vertical-align: text-bottom;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 #albums, #artists {
@@ -48,6 +50,14 @@ body {
 
 .artist:active {
     color: #00B7FF;
+}
+
+.btn-success {
+    background-color: #1DB954;
+}
+
+.btn-success:hover {
+    background-color: #1DB954;
 }
 
 @media only screen and (max-width: 650px) {
