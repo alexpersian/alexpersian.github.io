@@ -23,16 +23,6 @@ $(document).ready(function() {
         return hashParams;
     };
 
-    // Random string used for state value
-    function generateRandomString(length) {
-        var text = '';
-        var possibilities = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        for (var i = 0; i < length; i++) {
-            text += possibilities.charAt(Math.floor(Math.random() * possibilities.length));
-        }
-        return text;
-    };
-
     var params = getHashParams();
     var accessToken = params.access_token,
         state = params.state,
@@ -57,7 +47,7 @@ $(document).ready(function() {
 
     // Basic login auth flow
     $('#login').click(function login() {
-        var state = generateRandomString(16);
+        var state = Math.random().toString(36).substring(2);
         localStorage.setItem(stateKey, state);
 
         var authURL = 'https://accounts.spotify.com/authorize';
