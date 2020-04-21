@@ -1,11 +1,13 @@
-* [Chromatic](http://alexpersian.com/html/chromatic.html)
-* [Spotify Search](http://alexpersian.com/html/spotify-app.html)
-* [Whiteboard](http://alexpersian.com/html/whiteboard.html)
-* [iOS Links](http://alexpersian.com/html/ios-links.html)
-* [Slaughterfest99](http://alexpersian.com/SlaughterFest99/index.html)
-* [Terrain Generator](http://alexpersian.com/html/terrain.html)
-* [Pixel Picture](http://alexpersian.com/html/picture.html)
-* [Bubbles](http://alexpersian.com/html/bubbles.html)
-* [Binary](http://alexpersian.com/html/binary.html)
+# Projects
+
+* [Chromatic](/html/chromatic.html)
+* [Spotify Search](/html/spotify-app.html)
+* [Whiteboard](/html/whiteboard.html)
+* [iOS Links](/html/ios-links.html)
+* [Slaughterfest99](/SlaughterFest99/index.html)
+* [Terrain Generator](/html/terrain.html)
+* [Pixel Picture](/html/picture.html)
+* [Bubbles](/html/bubbles.html)
+* [Binary](/html/binary.html)
 
 Enjoy!
