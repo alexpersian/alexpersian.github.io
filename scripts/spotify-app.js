@@ -6,7 +6,7 @@ $(document).ready(function() {
     // Authorization info
     var CLIENT_ID = "d96dcdaf6e674b46a1bf42d5f6367889";
     var AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
-    var REDIRECT_URI = "http://alexpersian.com/html/spotify-app.html";
+    var REDIRECT_URI = "https://alexpersian.github.io/html/spotify-app.html";
 
     // Implicit Grant auth process
     // Referencing Spotify's example
